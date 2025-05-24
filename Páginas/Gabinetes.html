@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>GABINETES</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <script src="../Carrito/Js/Carrito.js" defer></script> 
+</head>
+<body>
+  <div id="notificacion" style="position: fixed; top: 20px; right: 20px; background: #333; color: white; padding: 10px; border-radius: 8px; display: none; z-index: 999;"></div>
+  <main>
+    <h1>GABINETES</h1>
+   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; padding: 20px;">
+
+  <div class="producto">
+  <img src="Imagenes/Gabinetes/NZXT H510.png" alt="NZXT H510" class="imagen-producto" width="200" height="170">
+
+  <div class="titulo-producto">
+    <h3><strong>NZXT H510</strong></h3>
+  </div>
+
+  <p class="descripcion-producto">
+    <strong>Compatibilidad:</strong> ATX, Micro-ATX, Mini-ITX <br>
+    <strong>Material:</strong> Acero con panel lateral de vidrio templado <br>
+    <strong>Ventilación:</strong> 2 ventiladores incluidos (frontal y trasero) <br>
+    <strong>Refrigeración líquida:</strong> Compatible con radiadores de hasta 280 mm <br>
+    <strong>Puertos frontales:</strong> 1x USB 3.1 Type-C, 1x USB 3.0, 1x jack de audio
+  </p>
+
+  <button onclick="añadirAlCarrito(this,'NZXT H510', '800')">Añadir al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="Imagenes/Gabinetes/Cooler Master MasterBox TD500 Mesh V2.png" alt="Cooler Master MasterBox TD500 Mesh V2" class="imagen-producto" width="210" height="170">
+
+  <div class="titulo-producto">
+    <h3><strong>Cooler Master MasterBox TD500 Mesh V2</strong></h3>
+  </div>
+
+  <p class="descripcion-producto">
+    <strong>Compatibilidad:</strong> ATX, Micro-ATX, Mini-ITX <br>
+    <strong>Material:</strong> Acero con panel lateral de vidrio templado <br>
+    <strong>Ventilación:</strong> 3 ventiladores ARGB de 120 mm incluidos (frontales) <br>
+    <strong>Puertos frontales:</strong> 2x USB 3.2 Gen1, 1x USB 3.2 Gen2 Type-C, 1x jack de audio
+  </p>
+
+  <button onclick="añadirAlCarrito(this,'Cooler Master MasterBox TD500 Mesh V2', '1000')">Añadir al carrito</button>
+</div>
+
+</div>
+    
+    <a href="../Carrito/Carrito.html">🛒 Ver carrito</a>
+    <br>
+    <a href="../index.html">⬅ Volver al inicio</a>
+</main>
+</body>
+</html>

@@ -1,0 +1,114 @@
+:root {
+    --color-texto: #ffffff;
+    --color-titulo1: #bc0f17;
+    --color-titulo2: #aa0000;
+    --color-titulo3: rgb(255, 255, 255);
+    --color-parrafo: rgb(255, 255, 255);
+    --color-text: rgb(255, 255, 255);
+    --color-subtitulo: rgb(5, 5, 5);
+    --font-sin-serif: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --fondo-body: rgb(12, 12, 12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--fondo-body);
+    font-family: var(--font-sin-serif);
+    color: var(--color-texto);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 5rem;
+    font-family: crackvetica, var(--font-sin-serif);
+    color: var(--color-titulo1);
+}
+
+h2 {
+    font-size: 3rem;
+    color: var(--color-titulo2);
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: var(--color-titulo3);
+}
+
+p {
+    font-size: 1rem;
+    color: var(--color-parrafo);
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+button, .btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+button:hover, .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Estilo básico para tablas en recibos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    color: var(--color-texto);
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+    background-color: #222;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: var(--color-titulo1);
+}
+
+thead th {
+    padding: 12px;
+    font-weight: 700;
+    text-align: left;
+}
+
+tbody td {
+    padding: 10px 12px;
+    border-top: 1px solid #444;
+}
+
+/* Responsividad básica */
+@media (max-width: 768px) {
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.2rem; }
+    p  { font-size: 0.9rem; }
+    button, .btn { width: 100%; box-sizing: border-box; }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+}

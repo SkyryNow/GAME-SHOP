@@ -1,0 +1,312 @@
+:root {
+    --color-texto: #ffffff;
+    --color-titulo1: #bc0f17;
+    --color-titulo2: #aa0000;
+    --color-titulo3: rgb(255, 255, 255);
+    --color-parrafo: rgb(255, 255, 255);
+    --color-text: rgb(255, 255, 255);
+    --color-subtitulo: rgb(5, 5, 5);
+    --font-sin-serif: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --fondo-body: rgb(12, 12, 12);
+}
+
+h1 {
+    font-size: 5rem;
+    font-family: crackvetica;
+    color: var(--color-titulo1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 3rem;
+    color: var(--color-titulo2);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: var(--color-titulo3);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+img {
+    text-align: center;
+    margin: 0;
+}
+
+p {
+    font-size: 1rem;
+    color: var(--color-parrafo);
+    text-align: justify;
+    margin-bottom: 15px;
+}
+/* Formulario */
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--color-texto);
+}
+
+form input {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1.5px solid #444;
+  background-color: #222;
+  color: #eee;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+form input:focus {
+  border-color: var(--color-titulo1);
+  outline: none;
+}
+
+form button {
+  margin-top: 10px;
+  background-color: var(--color-titulo1);
+  color: var(--color-titulo3);
+  font-weight: 700;
+  padding: 14px 0;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 18px;
+  box-shadow: 0 0 10px var(--color-titulo1);
+}
+
+form button:hover {
+  background-color: var(--color-titulo2);
+  box-shadow: 0 0 15px var(--color-titulo2);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: var(--fondo-body);
+  font-family: var(--font-sin-serif);
+  color: var(--color-texto);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor-carrito {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+/* Botones y enlaces */
+button, .btn {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+button:hover, .btn:hover {
+  background-color: #0056b3;
+  cursor: pointer;
+}
+/* Método de Pago */
+#metodo-pago {
+  width: 100%;
+  max-width: 300px;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-family: var(--font-sin-serif);
+  color: var(--color-texto);
+  background-color: #1a1a1a;          /* oscuro para que combine con fondo */
+  border: 2px solid var(--color-titulo1);
+  border-radius: 8px;
+  appearance: none;                   /* quita flecha default para estilos personalizados */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"); /* flecha blanca */
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px 16px;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#metodo-pago:focus {
+  border-color: var(--color-titulo2);
+  box-shadow: 0 0 8px var(--color-titulo2);
+  outline: none;
+}
+
+/* Sombras */
+h1, h2, h3 {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+
+button, .btn {
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+/* Animación de Botones */
+button, .btn {
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+button:hover, .btn:hover {
+  transform: scale(1.05);
+}
+/* Base para Móviles */
+@media (max-width: 768px) {
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.2rem; }
+  section { padding: 15px; }
+}
+/* Vista bien Celular */
+@media (max-width: 768px) {
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.2rem; }
+  p  { font-size: 0.9rem; }
+  .card, .btn { width: 100%; box-sizing: border-box; }
+}
+@media (max-width: 480px) {
+  .contenedor-carrito {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  form button {
+    font-size: 16px;
+    padding: 12px 0;
+  }
+
+  #lista-carrito li {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 14px;
+  }
+}
+
+#lista-carrito li.eliminado {
+    opacity: 0;
+    transform: translateX(-50%);
+}
+/* Visual Productos */
+#lista-carrito {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.carrito-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.carrito-control .total {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #eee;
+}
+
+#lista-carrito li {
+  background-color: #333333;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #eee;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+}
+/* Scroll */
+html {
+  scroll-behavior: smooth;
+}
+/* Estilo de Modal */
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-contenido {
+  background-color: #222;
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: center;
+  color: var(--color-texto);
+  box-shadow: 0 0 15px var(--color-titulo1);
+  max-width: 320px;
+}
+
+.modal-botones button {
+  margin: 10px 15px 0 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  color: white;
+  background-color: var(--color-titulo1);
+  box-shadow: 0 0 10px var(--color-titulo1);
+  transition: background-color 0.3s ease;
+}
+
+.modal-botones button:hover {
+  background-color: var(--color-titulo2);
+}
+.modal {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-contenido {
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.modal.oculto {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.modal-contenido.oculto {
+  animation: slideOut 0.3s ease forwards;
+}
+
+@keyframes slideOut {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-20px); opacity: 0; }
+}

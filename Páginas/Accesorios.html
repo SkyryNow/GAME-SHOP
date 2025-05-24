@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>ACCESORIOS</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <script src="../Carrito/Js/Carrito.js" defer></script> 
+</head>
+<div id="notificacion" style="position: fixed; top: 20px; right: 20px; background: #333; color: white; padding: 10px; border-radius: 8px; display: none; z-index: 999;"></div>
+<body>
+  
+    <h1>Accesorios</h1>
+    
+
+  <main>
+    
+  <hr style="border: none; height: 10px; background: linear-gradient(to right, #f00, #0f0, #00f); border-radius: 2px;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; padding: 20px;">
+
+  <!-- Ratones -->
+  <div class="producto">
+  <img src="Imagenes/Accesorios/Mouse Rowell.png" alt="Mouse Rowell" class="imagen-producto">
+
+  <div class="titulo-producto">
+    <h3><strong>Mouse Rowell</strong></h3>
+  </div>
+
+  <p class="descripcion-producto">
+    <strong>Tipo:</strong> Óptico con cable <br>
+    <strong>Diseño:</strong> Clásico, ergonómico <br>
+    <strong>Conectividad:</strong> USB <br>
+    <strong>Botones:</strong> 3 estándar <br>
+    <strong>Uso ideal:</strong> Oficina o casa
+  </p>
+
+  <button onclick="añadirAlCarrito(this,'Mouse Rowell', '78')">Añadir al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="Imagenes/Accesorios/Mini Mouse retráctil para portátil.png" alt="Mini Mouse Retráctil para Portátil" class="imagen-producto">
+
+  <div class="titulo-producto">
+    <h3><strong>Mini Mouse Retráctil para Portátil</strong></h3>
+  </div>
+
+  <p class="descripcion-producto">
+    <strong>Tipo:</strong> Mini mouse óptico <br>
+    <strong>Diseño:</strong> Compacto y ligero <br>
+    <strong>Conectividad:</strong> USB con cable retráctil <br>
+    <strong>Botones:</strong> 2 + scroll <br>
+    <strong>Uso ideal:</strong> Viajes y portátiles
+  </p>
+
+  <button onclick="añadirAlCarrito(this,'Mini Mouse Retráctil para Portátil', '40')">Añadir al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="Imagenes/Accesorios/Mouse Gamer Logitech G530.png" alt="Mouse Gamer Logitech" class="imagen-producto">
+
+  <div class="titulo-producto">
+    <h3><strong>Mouse Gamer Logitech</strong></h3>
+  </div>
+
+  <p class="descripcion-producto">
+    <strong>Tipo:</strong> Gamer con alta precisión <br>
+    <strong>Sensor:</strong> Óptico de alto DPI <br>
+    <strong>Botones:</strong> Programables <br>
+    <strong>Iluminación:</strong> RGB personalizable <br>
+    <strong>Uso ideal:</strong> Gaming competitivo
+  </p>
+
+  <button onclick="añadirAlCarrito(this,'Mouse Gamer Logitech', '325')">Añadir al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="Imagenes/Accesorios/Mouse Havit de 6 botones.png" alt="Mouse Havit de 6 botones" class="imagen-producto">
+
+  <div class="titulo-producto">
+    <h3><strong>Mouse Havit de 6 botones</strong></h3>
+  </div>
+
+  <p class="descripcion-producto">
+    <strong>Tipo:</strong> Gamer con diseño ergonómico <br>
+    <strong>Botones:</strong> 6 configurables <br>
+    <strong>Sensor:</strong> Precisión ajustable (DPI) <br>
+    <strong>Iluminación:</strong> LED multicolor <br>
+    <strong>Uso ideal:</strong> Juegos y productividad
+  </p>
+
+  <button onclick="añadirAlCarrito(this,'Mouse Havit de 6 botones', '80')">Añadir al carrito</button>
+</div>
+
+
+  <!-- Teclados -->
+  <div style="background-color: #c7c6c6c5; color: white; display: flex; flex-direction: column; align-items: center; width: 300px; height: 500px; border: 1px solid #ffffff; padding: 10px; border-radius: 10px; box-shadow: 0 4px 8px #ffffff;">
+    <img src="Imagenes/Accesorios/TECLADO MECÁNICO Logitech G413 TKL SE.png" alt="Teclado Mecánico Logitech G413 TKL SE" width="300" height="230">
+
+    <div style="background-color: #9facacc5; color: white; display: flex; flex-direction: column; align-items: center; width: 300px; height: 80px; border: 1px solid #9facacc5; padding: 10px; border-radius: 0px; box-shadow: 0 2px 8px #9facacc5;">
+    <h3><strong>Teclado Mecánico Logitech G413 TKL SE</strong></h3>
+    </div>
+    <br>
+    <p>
+      <strong>Tipo:</strong> Mecánico tenkeyless <br>
+      <strong>Iluminación:</strong> Blanca <br>
+      <strong>Switches:</strong> Mecánicos táctiles <br>
+      <strong>Material:</strong> Aleación de aluminio <br>
+      <strong>Uso ideal:</strong> Juegos y escritura precisa
+    </p>
+        <button onclick="añadirAlCarrito(this,'Teclado Mecánico Logitech G413 TKL SE', '450')">Añadir al carrito</button>
+  </div>
+
+  <div style="background-color: #c7c6c6c5; color: white; display: flex; flex-direction: column; align-items: center; width: 300px; height: 500px; border: 1px solid #ffffff; padding: 10px; border-radius: 10px; box-shadow: 0 4px 8px #ffffff;">
+    <img src="Imagenes/Accesorios/TECLADO INALÁMBRICO MULTIMEDIA WK841.png" alt="Teclado Inalámbrico Multimedia WK841" width="330" height="230">
+
+    <div style="background-color: #9facacc5; color: white; display: flex; flex-direction: column; align-items: center; width: 300px; height: 80px; border: 1px solid #9facacc5; padding: 10px; border-radius: 0px; box-shadow: 0 2px 8px #9facacc5;">
+    <h3><strong>Teclado Inalámbrico Multimedia WK841</strong></h3>
+    </div>
+    <br>
+    <p>
+      <strong>Tipo:</strong> Inalámbrico multimedia <br>
+      <strong>Conectividad:</strong> Receptor USB <br>
+      <strong>Diseño:</strong> Delgado y ligero <br>
+      <strong>Funciones:</strong> Teclas multimedia <br>
+      <strong>Uso ideal:</strong> Trabajo y hogar
+    </p>
+        <button onclick="añadirAlCarrito(this,'Teclado Inalámbrico Multimedia WK841', '125')">Añadir al carrito</button>
+  </div>
+
+  <div style="background-color: #c7c6c6c5; color: white; display: flex; flex-direction: column; align-items: center; width: 300px; height: 500px; border: 1px solid #ffffff; padding: 10px; border-radius: 10px; box-shadow: 0 4px 8px #ffffff;">
+    <img src="Imagenes/Accesorios/TECLADO CORSAIR K55 RGB PRO GAMING.png" alt="Teclado Corsair K55 RGB PRO Gaming" width="350" height="230">
+    <div style="background-color: #9facacc5; color: white; display: flex; flex-direction: column; align-items: center; width: 300px; height: 80px; border: 1px solid #9facacc5; padding: 10px; border-radius: 0px; box-shadow: 0 2px 8px #9facacc5;">
+    <h3><strong>Teclado Corsair K55 RGB PRO Gaming</strong></h3>
+    </div>
+    <br>
+    <p>
+      <strong>Tipo:</strong> Membrana con teclas macro <br>
+      <strong>Iluminación:</strong> RGB dinámica por zona <br>
+      <strong>Macros:</strong> 6 teclas dedicadas <br>
+      <strong>Resistencia:</strong> A salpicaduras <br>
+      <strong>Uso ideal:</strong> Juegos intensivos
+    </p>
+        <button onclick="añadirAlCarrito(this,'Teclado Corsair K55 RGB PRO Gaming', '625')">Añadir al carrito</button>
+  </div>
+
+  <div style="background-color: #c7c6c6c5; color: white; display: flex; flex-direction: column; align-items: center; width: 300px; height: 500px; border: 1px solid #ffffff; padding: 10px; border-radius: 10px; box-shadow: 0 4px 8px #ffffff;">
+    <img src="Imagenes/Accesorios/TECLADO AZIO MGK L80 Led Red.png" alt="Teclado AZIO MGK L80 LED Red" width="280" height="200">
+    <br> 
+    <div style="background-color: #9facacc5; color: white; display: flex; flex-direction: column; align-items: center; width: 300px; height: 80px; border: 1px solid #9facacc5; padding: 10px; border-radius: 0px; box-shadow: 0 2px 8px #9facacc5;">
+    <h3><strong>Teclado AZIO MGK L80 LED Red</strong></h3>
+    </div>
+    <br>
+    <p>
+      <strong>Tipo:</strong> Mecánico profesional <br>
+      <strong>Iluminación:</strong> LED roja <br>
+      <strong>Construcción:</strong> Aluminio + reposamuñecas <br>
+      <strong>Conectividad:</strong> Cable USB <br>
+      <strong>Uso ideal:</strong> Escritorio y gaming
+    </p>
+        <button onclick="añadirAlCarrito(this,'Teclado AZIO MGK L80 LED Red', '583')">Añadir al carrito</button>
+  </div>
+<div class="producto">
+  <img src="Imagenes/Accesorios/Corsair K70 RGB Rapidfire.png" alt="Corsair K70 RGB Rapidfire" class="imagen-producto">
+
+  <div class="titulo-producto">
+    <h3><strong>Corsair K70 RGB Rapidfire</strong></h3>
+  </div>
+
+  <p class="descripcion-producto">
+    <strong>Tipo:</strong> Teclado mecánico para juegos <br>
+    <strong>Interruptores:</strong> Cherry MX Speed <br>
+    <strong>Retroiluminación:</strong> RGB por tecla <br>
+    <strong>Construcción:</strong> Aluminio anodizado <br>
+    <strong>Extras:</strong> Teclas multimedia, reposamuñecas <br>
+    <strong>Conectividad:</strong> Cable USB trenzado
+  </p>
+
+  <button onclick="añadirAlCarrito(this,'Corsair K70 RGB Rapidfire', '830')">Añadir al carrito</button>
+</div>
+
+
+<div class="producto">
+  <img src="Imagenes/Accesorios/HyperX Alloy Core RGB.png" alt="HyperX Alloy Core RGB" class="imagen-producto">
+
+  <div class="titulo-producto">
+    <h3><strong>HyperX Alloy Core RGB</strong></h3>
+  </div>
+
+  <p class="descripcion-producto">
+    <strong>Tipo:</strong> Teclado de membrana retroiluminado <br>
+    <strong>Retroiluminación:</strong> RGB con 6 efectos <br>
+    <strong>Construcción:</strong> Plástico reforzado, resistente a salpicaduras <br>
+    <strong>Extras:</strong> Teclas multimedia, modo gaming <br>
+    <strong>Conectividad:</strong> USB
+  </p>
+
+  <button onclick="añadirAlCarrito(this,'HyperX Alloy Core RGB', '420')">Añadir al carrito</button>
+</div>
+
+
+</div>
+
+    <a href="../Carrito/Carrito.html">🛒 Ver carrito</a>
+    <br>
+    <a href="../index.html">⬅ Volver al inicio</a>
+</main>
+</body>
+</html>

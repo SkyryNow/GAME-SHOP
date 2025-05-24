@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>VideoJuegos</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <script src="../Carrito/Js/Carrito.js" defer></script> 
+</head>
+<div id="notificacion" style="position: fixed; top: 20px; right: 20px; background: #333; color: white; padding: 10px; border-radius: 8px; display: none; z-index: 999;"></div>
+<body>
+  <main>
+    <h1>VideoJuegos</h1>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; padding: 20px;">
+
+      <div class="producto">
+  <img src="Imagenes/VideoJuegos/Grand thef auto SAN ANDREAS.jpg" alt="Grand thef auto SAN ANDREAS" class="imagen-producto">
+
+  <div class="titulo-producto">
+    <h3><strong>Grand thef auto SAN ANDREAS</strong></h3>
+  </div>
+
+  <p class="descripcion-producto">
+    Juego de acción en mundo abierto donde seguís la historia de CJ en una ciudad llena de crimen, libertad y caos.
+  </p>
+
+  <button onclick="añadirAlCarrito(this,'Grand thef auto SAN ANDREAS', '80')">Añadir al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="Imagenes/VideoJuegos/Minecraft Java.jpg" alt="Minecraft Java" class="imagen-producto">
+
+  <div class="titulo-producto">
+    <h3><strong>Minecraft Java</strong></h3>
+  </div>
+
+  <p class="descripcion-producto">
+    Sandbox creativo y de supervivencia donde podés construir, explorar y luchar en mundos generados por bloques.
+  </p>
+
+  <button onclick="añadirAlCarrito(this,'Minecraft Java', '330')">Añadir al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="Imagenes/VideoJuegos/EA SPORT FC 25.jpg" alt="EA SPORT FC 25" class="imagen-producto">
+
+  <div class="titulo-producto">
+    <h3><strong>EA SPORT FC 25</strong></h3>
+  </div>
+
+  <p class="descripcion-producto">
+    Simulador de fútbol realista con licencias oficiales, modos competitivos y mejoras gráficas anuales.
+  </p>
+
+  <button onclick="añadirAlCarrito(this,'EA SPORT FC 25', '143')">Añadir al carrito</button>
+</div>
+
+<div class="producto">
+  <img src="Imagenes/VideoJuegos/PLANTAS VS ZOMBIES.png" alt="PLANTAS VS ZOMBIES" class="imagen-producto">
+
+  <div class="titulo-producto">
+    <h3><strong>PLANTAS VS ZOMBIES</strong></h3>
+  </div>
+
+  <p class="descripcion-producto">
+    Juego de estrategia casual donde usás plantas con habilidades únicas para defender tu jardín de hordas de zombis.
+  </p>
+
+  <button onclick="añadirAlCarrito(this,'PLANTAS VS ZOMBIES', '49')">Añadir al carrito</button>
+</div>
+
+    
+
+    <a href="../Carrito/Carrito.html">🛒 Ver carrito</a>
+    <br>
+    <a href="../index.html">⬅ Volver al inicio</a>
+</main>
+</body>
+</html>
