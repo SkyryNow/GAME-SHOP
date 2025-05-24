@@ -10,12 +10,14 @@
     --fondo-body: rgb(12, 12, 12);
 }
 
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estructura general */
 body {
     background-color: var(--fondo-body);
     font-family: var(--font-sin-serif);
@@ -54,6 +56,7 @@ p {
     margin-bottom: 15px;
 }
 
+/* Botones */
 button, .btn {
     padding: 10px 20px;
     background-color: #007BFF;
@@ -71,7 +74,7 @@ button:hover, .btn:hover {
     transform: scale(1.05);
 }
 
-/* Estilo básico para tablas en recibos */
+/* Tablas */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -98,7 +101,7 @@ tbody td {
     border-top: 1px solid #444;
 }
 
-/* Responsividad básica */
+/* Responsividad combinada */
 @media (max-width: 768px) {
     h1 { font-size: 3rem; }
     h2 { font-size: 2rem; }
