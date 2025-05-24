@@ -101,7 +101,28 @@ tbody td {
     border-top: 1px solid #444;
 }
 
-/* Responsividad combinada */
+.contenedor-carrito {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05); /* fondo claro semitransparente */
+  backdrop-filter: blur(10px); /* desenfoque para efecto "vidrio" */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* sombra envolvente */
+  color: white; /* texto claro */
+}
+
+body {
+  background-color: rgb(12, 12, 12); /* fondo oscuro */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Dispositivo celular */
 @media (max-width: 768px) {
     h1 { font-size: 3rem; }
     h2 { font-size: 2rem; }
