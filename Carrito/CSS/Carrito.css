@@ -170,16 +170,15 @@ button:hover, .btn:hover {
   h1 { font-size: 3rem; }
   h2 { font-size: 2rem; }
   h3 { font-size: 1.2rem; }
-  section { padding: 15px; }
-}
-/* Vista bien Celular */
-@media (max-width: 768px) {
-  h1 { font-size: 3rem; }
-  h2 { font-size: 2rem; }
-  h3 { font-size: 1.2rem; }
   p  { font-size: 0.9rem; }
-  .card, .btn { width: 100%; box-sizing: border-box; }
+  section { padding: 15px; }
+  .card, .btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
+
+/* Vista bien en celular pequeño */
 @media (max-width: 480px) {
   .contenedor-carrito {
     padding: 15px;
