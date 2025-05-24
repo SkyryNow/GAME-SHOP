@@ -8,10 +8,13 @@
 </head>
 <div id="notificacion" style="position: fixed; top: 20px; right: 20px; background: #333; color: white; padding: 10px; border-radius: 8px; display: none; z-index: 999;"></div>
 <body>
-  <main>
-    <h1>VideoJuegos</h1>
 
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; padding: 20px;">
+    <h1>VideoJuegos</h1>
+    
+  <main>
+
+    <hr style="border: none; height: 10px; background: linear-gradient(to right, #f00, #0f0, #00f); border-radius: 2px;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; padding: 20px;">
 
       <div class="producto">
   <img src="Imagenes/VideoJuegos/Grand thef auto SAN ANDREAS.jpg" alt="Grand thef auto SAN ANDREAS" class="imagen-producto">
@@ -69,12 +72,20 @@
   <button onclick="añadirAlCarrito(this,'PLANTAS VS ZOMBIES', '49')">Añadir al carrito</button>
 </div>
 
-    </div>
+</div>
 
 <div style="text-align: center;">
-  <a href="../Carrito/Carrito.html" class="boton-nav">🛒 Ver carrito</a>
-  <a href="../index.html" class="boton-nav">⬅ Volver al inicio</a>
+  <a href="../Carrito/Carrito.html" class="boton-nav"
+   style="position: fixed; top: 20px; right: 20px; background-color: #333; color: white; padding: 10px 12px; border-radius: 8px; text-decoration: none; z-index: 1000;">
+  🛒 Ver carrito
+</a>
+
+<div style="text-align: center; margin-top: 60px;">
+  <a href="../index.html" class="boton-nav" 
+   style="position: fixed; top: 20px; left: 20px; background-color: #333; color: white; padding: 14px 20px; border-radius: 8px; text-decoration: none; z-index: 1000;">⬅
+  </a>
 </div>
+
 </main>
 </body>
 </html>
