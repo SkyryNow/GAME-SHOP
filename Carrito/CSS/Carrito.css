@@ -91,7 +91,7 @@ form button:hover {
 }
 
 body {
-    background-image: url(../Imagenes/Fondo.png);
+    background-image: url(../Carrito/Fondo.png);
     background-color: var(--fondo-body);
     font-family: var(--font-sin-serif);
     color: var(--color-texto);
