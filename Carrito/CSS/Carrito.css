@@ -91,13 +91,13 @@ form button:hover {
 }
 
 body {
-    background-image: url(../Carrito/Fondo.png);
-    background-color: var(--fondo-body);
-    font-family: var(--font-sin-serif);
-    color: var(--color-texto);
-    padding: 20px;
-    display: flex;
-    justify-content: center;
+    background-image: url(/Imagenes/Fondo.png);
+  background-color: var(--fondo-body);
+  font-family: var(--font-sin-serif);
+  color: var(--color-texto);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .contenedor-carrito {
@@ -165,18 +165,6 @@ button, .btn {
 }
 button:hover, .btn:hover {
   transform: scale(1.05);
-}
-/* Base para Móviles */
-@media (max-width: 768px) {
-  h1 { font-size: 3rem; }
-  h2 { font-size: 2rem; }
-  h3 { font-size: 1.2rem; }
-  p  { font-size: 0.9rem; }
-  section { padding: 15px; }
-  .card, .btn {
-    width: 100%;
-    box-sizing: border-box;
-  }
 }
 
 /* Vista bien en celular pequeño */
@@ -309,4 +297,271 @@ html {
 @keyframes slideOut {
   from { transform: translateY(0); opacity: 1; }
   to { transform: translateY(-20px); opacity: 0; }
+}
+
+/* Vista para Dispositivos Móviles */
+
+:root {
+    --color-texto: #ffffff;
+    --color-titulo1: #bc0f17;
+    --color-titulo2: #ffffff;
+    --color-titulo3: rgb(255, 255, 255);
+    --color-parrafo: rgb(252, 252, 252);
+    --color-text: rgb(255, 255, 255);
+    --font-sin-serif: Arial, Helvetica, sans-serif;
+    --fondo-body: rgb(12, 12, 12);
+}
+.catalogo-card {
+  background-color: #8a8a8ac5;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+  height: 80px;
+  border: 1px solid #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px #ffffff;
+}
+
+label {
+    color: var(--color-text);
+    text-align: center;
+    margin-bottom: 20px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/Imagenes/Fondo.png);
+    background-color: var(--fondo-body);
+    font-family: var(--font-sin-serif);
+    color: var(--color-texto);
+}
+@font-face {
+    font-family: crackvetica;
+    src: url(../CSS/Tipografía/crackvetica/Crackvetica.ttf) format(truetype);
+}
+h1 {
+    font-size: 5rem;
+    font-family: crackvetica;
+    color: var(--color-titulo1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 3rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: var(--color-titulo2);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 2rem;
+    color: var(--color-titulo3);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+img {
+    text-align: center;
+    margin: 0;
+}
+
+p {
+    font-size: 1.2rem;
+    color: var(--color-parrafo);
+    text-align: justify;
+    margin-bottom: 15px;
+}
+/* Animación del Catalogo */
+.catalogo-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px #ffffff;
+}
+/* Botones y enlaces */
+button, .btn {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+button:hover, .btn:hover {
+  background-color: #0056b3;
+  cursor: pointer;
+}
+/* Sombras */
+h1, h2, h3 {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+
+button, .btn {
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+/* Animación de Botones */
+button, .btn {
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+button:hover, .btn:hover {
+  transform: scale(1.05);
+}
+
+/* Carrito */
+#lista-carrito li {
+    transition: all 0.3s ease;
+}
+
+#lista-carrito li.eliminado {
+    opacity: 0;
+    transform: translateX(-50%);
+}
+/* Transiciones */
+* {
+  transition: all 0.2s ease-in-out;
+}
+/* Scroll */
+html {
+  scroll-behavior: smooth;
+}
+/* Carrusel */
+.partners-logos {
+    background: rgb(12, 12, 12);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.slider-marcas img {
+    width: 100px;
+    margin: 0 auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.slider-marcas img:hover {
+    filter: grayscale(0%);
+}
+.boton-nav {
+  display: inline-block;
+  background: linear-gradient(135deg, #00ff95, #006eff);
+  color: white;
+  padding: 12px 25px;
+  margin: 10px auto;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #00ff95;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+.boton-nav:hover {
+  background: linear-gradient(135deg, #00e6e6, #0008ff);
+  box-shadow: 0 0 25px #00ff95, 0 0 35px #00ff95;
+  transform: scale(1.05);
+}
+
+/* Botón Subir */
+
+#btn-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ffffff20;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  transition: background 0.3s;
+}
+#btn-top:hover {
+  background: #ffffff40;
+}
+
+/* Animación de Escritura */
+
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid white;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .1em;
+  animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white }
+}
+.typewriter.done {
+  border-right: none;
+}
+
+/* Vista para Dispositivos Móviles */
+
+@media (max-width: 768px) {
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.4rem; }
+  p  { font-size: 1rem; }
+
+  .catalogo-card {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .boton-nav {
+    width: 90%;
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .slider-marcas img {
+    width: 80px;
+  }
+
+  button, .btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  section {
+    padding: 10px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  #btn-top {
+    bottom: 15px;
+    right: 15px;
+    padding: 8px 12px;
+  }
+
+  .typewriter {
+    font-size: 1rem;
+    padding: 0 5px;
+  }
 }
