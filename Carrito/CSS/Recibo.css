@@ -113,7 +113,7 @@ tbody td {
 }
 
 body {
-  background-image: url(Fondo.png);
+  background-image: url(/Carrito/Fondo.png);
   background-color: rgb(12, 12, 12); /* fondo oscuro */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
