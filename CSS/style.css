@@ -34,7 +34,7 @@ label {
 }
 
 body {
-    background-image: url(../Imagenes/Fondo.png);
+    background-image: url(/Imagenes/Fondo.png);
     background-color: var(--fondo-body);
     font-family: var(--font-sin-serif);
     color: var(--color-texto);
@@ -169,23 +169,30 @@ html {
 }
 
 /* Botón Subir */
-
 #btn-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
+  width: 50px;           /* ancho fijo */
+  height: 50px;          /* alto fijo */
   background: #ffffff20;
   color: white;
   border: 1px solid white;
-  padding: 10px 15px;
+  padding: 0;             /* quita padding extra */
+  font-size: 1.5rem;      /* ajusta tamaño de la flecha */
+  text-align: center;     /* centra la flecha */
+  line-height: 50px;      /* alinea vertical */
   border-radius: 50%;
   cursor: pointer;
-  display: none;
+  display: none;          /* se mostrará vía JS */
   transition: background 0.3s;
+  z-index: 1000;
 }
+
 #btn-top:hover {
   background: #ffffff40;
 }
+
 
 /* Animación de Escritura */
 
@@ -252,10 +259,13 @@ html {
   }
 
   #btn-top {
-    bottom: 15px;
-    right: 15px;
-    padding: 8px 12px;
-  }
+  bottom: 15px;
+  right: 15px;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0;
+}
 
   .typewriter {
     font-size: 1rem;
