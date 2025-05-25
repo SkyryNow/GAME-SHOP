@@ -144,13 +144,58 @@ button:hover, .btn:hover {
   h3 { font-size: 1.2rem; }
   section { padding: 15px; }
 }
-/* Vista bien Celular */
+/* Vista para Dispositivos Móviles */
+
 @media (max-width: 768px) {
   h1 { font-size: 3rem; }
   h2 { font-size: 2rem; }
-  h3 { font-size: 1.2rem; }
-  p  { font-size: 0.9rem; }
-  .card, .btn { width: 100%; box-sizing: border-box; }
+  h3 { font-size: 1.4rem; }
+  p  { font-size: 1rem; }
+
+  .catalogo-card {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .boton-nav {
+    width: 90%;
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .slider-marcas img {
+    width: 80px;
+  }
+
+  button, .btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  section {
+    padding: 10px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  #btn-top {
+    bottom: 15px;
+    right: 15px;
+    padding: 8px 12px;
+  }
+
+  .typewriter {
+    font-size: 1rem;
+    padding: 0 5px;
+  }
 }
 /* Transiciones */
 * {
