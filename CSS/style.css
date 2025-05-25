@@ -219,6 +219,9 @@ html {
 /* Vista para Dispositivos Móviles */
 
 @media (max-width: 768px) {
+  button:not(#btn-top), .btn:not(#btn-top) {
+    width: 100%;
+  }
   h1 { font-size: 3rem; }
   h2 { font-size: 2rem; }
   h3 { font-size: 1.4rem; }
@@ -261,7 +264,7 @@ html {
   #btn-top {
   bottom: 15px;
   right: 15px;
-  width: 45px;
+  width: 45px; 
   height: 45px;
   line-height: 45px;
   padding: 0;
