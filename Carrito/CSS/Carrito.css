@@ -91,13 +91,13 @@ form button:hover {
 }
 
 body {
-  background-image: url(../Imagenes/Fondo.png);
-  background-color: var(--fondo-body);
-  font-family: var(--font-sin-serif);
-  color: var(--color-texto);
-  padding: 20px;
-  display: flex;
-  justify-content: center;
+    background-image: url(../Imagenes/Fondo.png);
+    background-color: var(--fondo-body);
+    font-family: var(--font-sin-serif);
+    color: var(--color-texto);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .contenedor-carrito {
