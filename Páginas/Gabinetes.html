@@ -10,59 +10,68 @@
   <div id="notificacion" style="position: fixed; top: 20px; left: 100px; background: #333; color: white; padding: 10px; border-radius: 8px; display: none; z-index: 999;"></div>
   
   <h1>GABINETES</h1>
-  
+  <!-- 🔍 Barra de Búsqueda -->
+<div class="contenedor-busqueda">
+  <input type="text" id="busqueda" placeholder="🔍 Buscar componentes..." onkeyup="filtrarProductos()">
+  </div>
   <main>
     
-   <hr style="border: none; height: 10px; background: linear-gradient(to right, #f00, #0f0, #00f); border-radius: 2px;">
+   <hr class="separador-colorido">
+
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; padding: 20px;">
 
   <div class="producto">
-  <img src="Imagenes/Gabinetes/NZXT H510.png" alt="NZXT H510" class="imagen-producto" width="200" height="170">
-
-  <div class="titulo-producto">
-    <h3><strong>NZXT H510</strong></h3>
+    <img src="Imagenes/Gabinetes/NZXT H510.png" alt="NZXT H510" class="imagen-producto" width="200" height="170">
+    <div class="titulo-producto">
+      <h3><strong>NZXT H510</strong></h3>
+    </div>
+    <p class="descripcion-producto">
+      <strong>Compatibilidad:</strong> ATX, Micro-ATX, Mini-ITX <br>
+      <strong>Material:</strong> Acero con panel lateral de vidrio templado <br>
+      <strong>Ventilación:</strong> 2 ventiladores incluidos (frontal y trasero) <br>
+      <strong>Refrigeración líquida:</strong> Compatible con radiadores de hasta 280 mm <br>
+      <strong>Puertos frontales:</strong> 1x USB 3.1 Type-C, 1x USB 3.0, 1x jack de audio
+    </p>
+    <button onclick="añadirAlCarrito(this,'NZXT H510', '800')">Añadir al carrito</button>
+    <p class="precio-producto"><strong>Precio:</strong> Bs 800</p>
   </div>
 
-  <p class="descripcion-producto">
-    <strong>Compatibilidad:</strong> ATX, Micro-ATX, Mini-ITX <br>
-    <strong>Material:</strong> Acero con panel lateral de vidrio templado <br>
-    <strong>Ventilación:</strong> 2 ventiladores incluidos (frontal y trasero) <br>
-    <strong>Refrigeración líquida:</strong> Compatible con radiadores de hasta 280 mm <br>
-    <strong>Puertos frontales:</strong> 1x USB 3.1 Type-C, 1x USB 3.0, 1x jack de audio
-  </p>
-
-  <button onclick="añadirAlCarrito(this,'NZXT H510', '800')">Añadir al carrito</button>
-</div>
-
-<div class="producto">
-  <img src="Imagenes/Gabinetes/Cooler Master MasterBox TD500 Mesh V2.png" alt="Cooler Master MasterBox TD500 Mesh V2" class="imagen-producto" width="210" height="170">
-
-  <div class="titulo-producto">
-    <h3><strong>Cooler Master MasterBox TD500 Mesh V2</strong></h3>
+  <div class="producto">
+    <img src="Imagenes/Gabinetes/Cooler Master MasterBox TD500 Mesh V2.png" alt="Cooler Master MasterBox TD500 Mesh V2" class="imagen-producto" width="210" height="170">
+    <div class="titulo-producto">
+      <h3><strong>Cooler Master MasterBox TD500 Mesh V2</strong></h3>
+    </div>
+    <p class="descripcion-producto">
+      <strong>Compatibilidad:</strong> ATX, Micro-ATX, Mini-ITX <br>
+      <strong>Material:</strong> Acero con panel lateral de vidrio templado <br>
+      <strong>Ventilación:</strong> 3 ventiladores ARGB de 120 mm incluidos (frontales) <br>
+      <strong>Puertos frontales:</strong> 2x USB 3.2 Gen1, 1x USB 3.2 Gen2 Type-C, 1x jack de audio
+    </p>
+    <button onclick="añadirAlCarrito(this,'Cooler Master MasterBox TD500 Mesh V2', '1000')">Añadir al carrito</button>
+    <p class="precio-producto"><strong>Precio:</strong> Bs 1000</p>
   </div>
 
-  <p class="descripcion-producto">
-    <strong>Compatibilidad:</strong> ATX, Micro-ATX, Mini-ITX <br>
-    <strong>Material:</strong> Acero con panel lateral de vidrio templado <br>
-    <strong>Ventilación:</strong> 3 ventiladores ARGB de 120 mm incluidos (frontales) <br>
-    <strong>Puertos frontales:</strong> 2x USB 3.2 Gen1, 1x USB 3.2 Gen2 Type-C, 1x jack de audio
-  </p>
+  </div>    
 
-  <button onclick="añadirAlCarrito(this,'Cooler Master MasterBox TD500 Mesh V2', '1000')">Añadir al carrito</button>
-</div>
+  <div style="text-align: center;">
+    <a href="../Carrito/Carrito.html" class="boton-nav"
+     style="position: fixed; top: 20px; right: 20px; background-color: #333; color: white; padding: 10px 12px; border-radius: 8px; text-decoration: none; z-index: 1000;">
+    🛒 Ver carrito
+    </a>
+  </div>
 
-<div style="text-align: center;">
-  <a href="../Carrito/Carrito.html" class="boton-nav"
-   style="position: fixed; top: 20px; right: 20px; background-color: #333; color: white; padding: 10px 12px; border-radius: 8px; text-decoration: none; z-index: 1000;">
-  🛒 Ver carrito
-</a>
+  <div style="text-align: center; margin-top: 60px;">
+    <a href="../index.html" class="boton-nav" 
+     style="position: fixed; top: 20px; left: 20px; background-color: #333; color: white; padding: 14px 20px; border-radius: 8px; text-decoration: none; z-index: 1000;">⬅
+    </a>
+  </div>
 
-<div style="text-align: center; margin-top: 60px;">
-  <a href="../index.html" class="boton-nav" 
-   style="position: fixed; top: 20px; left: 20px; background-color: #333; color: white; padding: 14px 20px; border-radius: 8px; text-decoration: none; z-index: 1000;">⬅
-  </a>
-</div>
-
-</main>
+  </main>
+    <!-- Botón Para Subir -->
+  <script src="../Js/BotónParaSubir.js" defer></script>
+  </main>
+<!-- Barra De Búsqueda -->
+ <script src="Js/Buscador.js" defer></script>
+  <button id="btn-top">↑</button>
 </body>
 </html>
