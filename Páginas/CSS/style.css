@@ -1,227 +1,279 @@
+/* =======================
+   🌐 Variables y Tipografía
+   ======================= */
 :root {
-    --color-texto: #ffffff;
-    --color-titulo1: #bc0f17;
-    --color-titulo2: #aa0000;
-    --color-titulo3: rgb(255, 255, 255);
-    --color-parrafo: rgb(255, 255, 255);
-    --color-text: rgb(255, 255, 255);
-    --color-subtitulo: rgb(5, 5, 5);
-    --font-sin-serif: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --fondo-body: rgb(12, 12, 12);
-}
-strong {
-  color: var(--color-subtitulo);
-  text-align: center;
-  margin-bottom: 20px;
-}
-label {
-    color: var(--color-text);
-    text-align: center;
-    margin-bottom: 20px;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  --color-principal: #C91414;
+  --color-secundario: #222222;
+  --color-fondo: #0c0c0c;
+  --color-blanco: #ffffff;
+  --color-gris: #e0e0e0;
+  --color-boton: #C91414;
+  --color-boton-hover: #a50f0f;
+  --sombra-suave: 0 4px 8px rgba(0, 0, 0, 0.4);
+
+  --fuente-general: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --fuente-titulos: crackvetica, sans-serif;
 }
 
-body {
-    background-image: url(/Páginas/Imagenes/Fondo.png);
-    background-color: var(--fondo-body);
-    font-family: var(--font-sin-serif);
-    color: var(--color-texto);
+/* =======================
+   🖋️ Tipografía Personalizada
+   ======================= */
+@font-face {
+  font-family: crackvetica;
+  src: url(../Páginas/Tipografía/crackvetica/Crackvetica.ttf) format('truetype');
 }
+
+/* =======================
+   🔁 Reset General
+   ======================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =======================
+   🧱 Estructura del Body
+   ======================= */
+body {
+  font-family: var(--fuente-general);
+  background-color: var(--color-fondo);
+  color: var(--color-blanco);
+  background-image: url(/Páginas/Imagenes/Fondo.png);
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 60px;
+}
+
+/* =======================
+   🏷️ Encabezados
+   ======================= */
+h1 {
+  font-family: var(--fuente-titulos);
+  font-size: 4rem;
+  color: var(--color-principal);
+  text-align: center;
+  margin: 40px 0 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+h2, h3 {
+  text-align: center;
+  color: var(--color-blanco);
+  margin-bottom: 20px;
+}
+
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.3rem; }
+
+/* =======================
+   📄 Párrafos
+   ======================= */
+p {
+  font-size: 1rem;
+  color: var(--color-gris);
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+/* =======================
+ 🔍 Buscador de productos 
+   ======================= */
+.contenedor-busqueda {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+#busqueda {
+  width: 60%;
+  padding: 10px;
+  border: 2px solid #c91414;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+/* =======================
+   🛍️ Sección de Productos
+   ======================= */
+.seccion-productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* =======================
+   📦 Tarjeta de Producto
+   ======================= */
 .producto {
-  background-color: #c7c6c6c5;
-  color: white;
+  background-color: #1f1f1f;
+  border-radius: 15px;
+  width: 280px;
+  padding: 15px;
+  box-shadow: var(--sombra-suave);
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 300px;
-  height: 500px;
-  border: 1px solid #ffffff;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px #ffffff;
-  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.producto:hover {
+  transform: scale(1.03);
 }
 
 .imagen-producto {
   max-width: 100%;
-  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .titulo-producto {
-  background-color: #9facacc5;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 80px;
-  border: 1px solid #9facacc5;
-  padding: 10px;
-  box-shadow: 0 2px 8px #9facacc5;
-  box-sizing: border-box;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  color: var(--color-principal);
 }
 
 .descripcion-producto {
+  font-size: 0.95rem;
   text-align: center;
+  color: var(--color-gris);
+  margin-bottom: 15px;
 }
 
-@font-face {
-    font-family: crackvetica;
-    src: url(../Páginas/Tipografía/crackvetica/Crackvetica.ttf) format('truetype');
+/* =======================
+   💰 Precio del producto 
+   ======================= */
+.precio-producto {
+  text-align: center;
+  margin-top: 6px;
+  font-weight: bold;
+  color: #27ae60; /* verde económico */
+  font-size: 16px;
 }
 
-h1 {
-    font-size: 5rem;
-    font-family: crackvetica;
-    color: var(--color-titulo1);
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 3rem;
-    color: var(--color-titulo2);
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-h3 {
-    font-size: 1.2rem;
-    color: var(--color-titulo3);
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-img {
-    text-align: center;
-    margin: 0;
-}
-
-p {
-    font-size: 1rem;
-    color: var(--color-parrafo);
-    text-align: justify;
-    margin-bottom: 15px;
-}
-/* Botones y enlaces */
+/* =======================
+   🔗 Botones y Enlaces
+   ======================= */
 button, .btn {
   padding: 10px 20px;
-  background-color: #007BFF;
+  background-color: var(--color-boton);
   color: white;
   border: none;
   border-radius: 8px;
-  transition: 0.3s;
-}
-
-button:hover, .btn:hover {
-  background-color: #0056b3;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  font-size: 1rem;
   cursor: pointer;
 }
-/* Sombras */
-h1, h2, h3 {
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
-}
 
-button, .btn {
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-}
-/* Animación de Botones */
-button, .btn {
-  transition: all 0.3s ease;
-  transform: scale(1);
-}
 button:hover, .btn:hover {
+  background-color: var(--color-boton-hover);
   transform: scale(1.05);
 }
-/* Base para Móviles */
-@media (max-width: 768px) {
-  h1 { font-size: 3rem; }
-  h2 { font-size: 2rem; }
-  h3 { font-size: 1.2rem; }
-  section { padding: 15px; }
-}
-/* Vista para Dispositivos Móviles */
 
-@media (max-width: 768px) {
-  h1 { font-size: 3rem; }
-  h2 { font-size: 2rem; }
-  h3 { font-size: 1.4rem; }
-  p  { font-size: 1rem; }
-
-  .catalogo-card {
-    width: 90%;
-    height: auto;
-    padding: 15px;
-    margin: 10px auto;
-    text-align: center;
-  }
-
-  .boton-nav {
-    width: 90%;
-    font-size: 1rem;
-    padding: 10px;
-  }
-
-  .slider-marcas img {
-    width: 80px;
-  }
-
-  button, .btn {
-    width: 100%;
-    font-size: 1rem;
-    padding: 10px;
-  }
-
-  section {
-    padding: 10px;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  #btn-top {
-    bottom: 15px;
-    right: 15px;
-    padding: 8px 12px;
-  }
-
-  .typewriter {
-    font-size: 1rem;
-    padding: 0 5px;
-  }
-}
-/* Transiciones */
-* {
-  transition: all 0.2s ease-in-out;
-}
-/* Scroll */
-html {
-  scroll-behavior: smooth;
-}
-.boton-nav {
-  display: inline-block;
-  background: linear-gradient(135deg, #00ff95, #006eff);
-  color: white;
-  padding: 12px 25px;
+.producto button {
+  display: block;
   margin: 10px auto;
-  font-size: 1.2em;
+}
+/* =======================
+   🧾 Etiquetas y Strong
+   ======================= */
+label, strong {
+  color: var(--color-blanco);
+  display: block;
+  margin-bottom: 10px;
   font-weight: bold;
-  text-decoration: none;
-  border-radius: 12px;
-  box-shadow: 0 0 15px #00ff95;
-  transition: all 0.3s ease-in-out;
   text-align: center;
 }
 
-.boton-nav:hover {
-  background: linear-gradient(135deg, #00e6e6, #0008ff);
-  box-shadow: 0 0 25px #00ff95, 0 0 35px #00ff95;
-  transform: scale(1.05);
+/* =======================
+   🔗 Botones Fijos
+   ======================= */
+.carrito-fijo {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+/* =======================
+   📱 Responsive / Móviles
+   ======================= */
+@media (max-width: 768px) {
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.1rem; }
+  p  { font-size: 0.9rem; }
+  .producto { width: 90%; }
+  .seccion-productos { padding: 10px; gap: 20px; }
+  button, .btn { width: 100%; }
+}
+
+/* =======================
+   🧩 Página Componentes
+   ======================= */
+.contenedor-componentes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* =======================
+  📦 Imágenes de productos uniformes 
+   ======================= */
+.imagen-producto {
+  width: 240px;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  padding: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* =======================
+   ⬅️ Botón Volver Fijo
+   ======================= */
+.volver-fijo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #333;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+/* =======================
+   🌈 Separador Colorido
+   ======================= */
+.separador-colorido {
+  border: none;
+  height: 10px;
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  border-radius: 8px;
+  margin: 30px auto;
+  max-width: 90%;
 }
