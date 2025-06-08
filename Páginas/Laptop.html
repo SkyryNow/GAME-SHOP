@@ -10,141 +10,131 @@
   <div id="notificacion" style="position: fixed; top: 20px; left: 100px; background: #333; color: white; padding: 10px; border-radius: 8px; display: none; z-index: 999;"></div>
   
   <h1>LAPTOP</h1>
-
+<!-- 🔍 Barra de Búsqueda -->
+<div class="contenedor-busqueda">
+  <input type="text" id="busqueda" placeholder="🔍 Buscar componentes..." onkeyup="filtrarProductos()">
+  </div>
   <main>
+    <hr class="separador-colorido">
 
-  <hr style="border: none; height: 10px; background: linear-gradient(to right, #f00, #0f0, #00f); border-radius: 2px;">
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; padding: 20px;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; padding: 20px;">
 
+      <!-- Producto 1 -->
+      <div class="producto">
+        <img src="Imagenes/Laptop/TUF GAMING F15.png" alt="ASUS TUF Gaming F15" class="imagen-producto" width="250" height="210">
+        <div class="titulo-producto"><h3><strong>ASUS TUF GAMING F15</strong></h3></div>
+        <p class="descripcion-producto">
+          <strong>Procesador:</strong> Intel Core i7-12700H o i5-11400H <br>
+          <strong>Gráfica:</strong> NVIDIA GeForce RTX 3050 / 3060 <br>
+          <strong>RAM:</strong> 16GB DDR4 (expandible) <br>
+          <strong>Almacenamiento:</strong> 1TB SSD NVMe <br>
+          <strong>Pantalla:</strong> 15.6" FHD 144Hz
+        </p>
+        <button onclick="añadirAlCarrito(this,'ASUS TUF Gaming F15', '7000')">Añadir al carrito</button>
+        <p class="precio-producto"><strong>Precio:</strong> Bs 7000</p>
+      </div>
 
-  <div class="producto">
-  <img src="Imagenes/Laptop/TUF GAMING F15.png" alt="ASUS TUF Gaming F15" class="imagen-producto" width="300" height="230">
+      <!-- Producto 2 -->
+      <div class="producto">
+        <img src="Imagenes/Laptop/LAPTO DELL INSPIRON 15 3511.png" alt="DELL INSPIRON 15 3511" class="imagen-producto" width="250" height="230">
+        <div class="titulo-producto"><h3><strong>DELL INSPIRON 15 3511</strong></h3></div>
+        <p class="descripcion-producto">
+          <strong>Procesador:</strong> Intel Core i5-1135G7 o i3-1115G4 <br>
+          <strong>Gráfica:</strong> Intel Iris Xe integrada <br>
+          <strong>RAM:</strong> 8GB DDR4 <br>
+          <strong>Almacenamiento:</strong> 256GB / 512GB SSD <br>
+          <strong>Pantalla:</strong> 15.6" FHD antirreflejo <br>
+          <strong>Uso ideal:</strong> Oficina, universidad, multimedia
+        </p>
+        <button onclick="añadirAlCarrito(this,'DELL INSPIRON 15 3511', '5000')">Añadir al carrito</button>
+        <p class="precio-producto"><strong>Precio:</strong> Bs 5000</p>
+      </div>
 
-  <div class="titulo-producto">
-    <h3><strong>ASUS TUF GAMING F15</strong></h3>
-  </div>
+      <!-- Producto 3 -->
+      <div class="producto">
+        <img src="Imagenes/Laptop/LAPTO DELL INSPIRON BLUE 15 5510.png" alt="DELL INSPIRON BLUE 15 5510" class="imagen-producto" width="250" height="230">
+        <div class="titulo-producto"><h3><strong>DELL INSPIRON BLUE 15 5510</strong></h3></div>
+        <p class="descripcion-producto">
+          <strong>Procesador:</strong> Intel Core i7-1165G7 <br>
+          <strong>Gráfica:</strong> Intel Iris Xe o NVIDIA MX450 <br>
+          <strong>RAM:</strong> 16GB DDR4 <br>
+          <strong>Almacenamiento:</strong> 512GB / 1TB SSD <br>
+          <strong>Pantalla:</strong> 15.6" FHD IPS <br>
+          <strong>Uso ideal:</strong> Edición básica, multitarea intensiva <br>
+          <strong>Extras:</strong> Diseño delgado y elegante
+        </p>
+        <button onclick="añadirAlCarrito(this,'DELL INSPIRON BLUE 15 5510', '8500')">Añadir al carrito</button>
+        <p class="precio-producto"><strong>Precio:</strong> Bs 8500</p>
+      </div>
 
-  <p class="descripcion-producto">
-    <strong>Procesador:</strong> Intel Core i7-12700H o i5-11400H <br>
-    <strong>Gráfica:</strong> NVIDIA GeForce RTX 3050 / 3060 <br>
-    <strong>RAM:</strong> 16GB DDR4 (expandible) <br>
-    <strong>Almacenamiento:</strong> 1TB SSD NVMe <br>
-    <strong>Pantalla:</strong> 15.6" FHD 144Hz
-  </p>
+      <!-- Producto 4 -->
+      <div class="producto">
+        <img src="Imagenes/Laptop/HP 14-DQ2038MS.png" alt="HP 14-DQ2038MS" class="imagen-producto" width="300" height="230">
+        <div class="titulo-producto"><h3><strong>HP 14-DQ2038MS</strong></h3></div>
+        <p class="descripcion-producto">
+          <strong>Procesador:</strong> Intel Celeron N4020 <br>
+          <strong>Gráfica:</strong> Intel UHD integrada <br>
+          <strong>RAM:</strong> 4GB DDR4 <br>
+          <strong>Almacenamiento:</strong> 64GB eMMC / 128GB SSD <br>
+          <strong>Pantalla:</strong> 14" HD (1366x768) <br>
+          <strong>Uso ideal:</strong> Navegación web, tareas básicas
+        </p>
+        <button onclick="añadirAlCarrito(this,'HP 14-DQ2038MS', '3000')">Añadir al carrito</button>
+        <p class="precio-producto"><strong>Precio:</strong> Bs 3000</p>
+      </div>
 
-  <button onclick="añadirAlCarrito(this,'ASUS TUF Gaming F15', '7000')">Añadir al carrito</button>
-</div>
+      <!-- Producto 5 -->
+      <div class="producto">
+        <img src="Imagenes/Laptop/NOTEBOOK15.6 HD.png" alt="NOTEBOOK 15.6 HD" class="imagen-producto" width="300" height="230">
+        <div class="titulo-producto"><h3><strong>NOTEBOOK 15.6 HD</strong></h3></div>
+        <p class="descripcion-producto">
+          <strong>Procesador:</strong> AMD Ryzen 3 3250U <br>
+          <strong>Gráfica:</strong> Integrada UHD <br>
+          <strong>RAM:</strong> 8GB DDR4 <br>
+          <strong>Almacenamiento:</strong> 256GB SSD <br>
+          <strong>Pantalla:</strong> 15.6" HD <br>
+          <strong>Uso ideal:</strong> Estudio, oficina ligera
+        </p>
+        <button onclick="añadirAlCarrito(this,'NOTEBOOK 15.6 HD', '4560')">Añadir al carrito</button>
+        <p class="precio-producto"><strong>Precio:</strong> Bs 4560</p>
+      </div>
 
-<div class="producto">
-  <img src="Imagenes/Laptop/LAPTO DELL INSPIRON 15 3511.png" alt="DELL INSPIRON 15 3511" class="imagen-producto" width="300" height="230">
+      <!-- Producto 6 -->
+      <div class="producto">
+        <img src="Imagenes/Laptop/ASUS ROG ZEPHYRUS G14.png" alt="ASUS ROG ZEPHYRUS G14" class="imagen-producto" width="300" height="230">
+        <div class="titulo-producto"><h3><strong>ASUS ROG ZEPHYRUS G14</strong></h3></div>
+        <p class="descripcion-producto">
+          <strong>Procesador:</strong> AMD Ryzen 9 6900HS / 7940HS <br>
+          <strong>Gráfica:</strong> NVIDIA GeForce RTX 3060 / 4060 <br>
+          <strong>RAM:</strong> 16GB o 32GB DDR5 <br>
+          <strong>Almacenamiento:</strong> 1TB SSD NVMe <br>
+          <strong>Pantalla:</strong> 14" QHD 120Hz / FHD 144Hz <br>
+          <strong>Uso ideal:</strong> Gaming pro
+        </p>
+        <button onclick="añadirAlCarrito(this,'ASUS ROG ZEPHYRUS G14', '13500')">Añadir al carrito</button>
+        <p class="precio-producto"><strong>Precio:</strong> Bs 13500</p>
+      </div>
 
-  <div class="titulo-producto">
-    <h3><strong>DELL INSPIRON 15 3511</strong></h3>
-  </div>
+    </div>    
 
-  <p class="descripcion-producto">
-    <strong>Procesador:</strong> Intel Core i5-1135G7 o i3-1115G4 <br>
-    <strong>Gráfica:</strong> Intel Iris Xe integrada <br>
-    <strong>RAM:</strong> 8GB DDR4 <br>
-    <strong>Almacenamiento:</strong> 256GB / 512GB SSD <br>
-    <strong>Pantalla:</strong> 15.6" FHD antirreflejo <br>
-    <strong>Uso ideal:</strong> Oficina, universidad, multimedia
-  </p>
+    <div style="text-align: center;">
+      <a href="../Carrito/Carrito.html" class="boton-nav"
+        style="position: fixed; top: 20px; right: 20px; background-color: #333; color: white; padding: 10px 12px; border-radius: 8px; text-decoration: none; z-index: 1000;">
+        🛒 Ver carrito
+      </a>
+    </div>
 
-  <button onclick="añadirAlCarrito(this,'DELL INSPIRON 15 3511', '5000')">Añadir al carrito</button>
-</div>
-
-<div class="producto">
-  <img src="Imagenes/Laptop/LAPTO DELL INSPIRON BLUE 15 5510.png" alt="DELL INSPIRON BLUE 15 5510" class="imagen-producto" width="300" height="230">
-
-  <div class="titulo-producto">
-    <h3><strong>DELL INSPIRON BLUE 15 5510</strong></h3>
-  </div>
-
-  <p class="descripcion-producto">
-    <strong>Procesador:</strong> Intel Core i7-1165G7 <br>
-    <strong>Gráfica:</strong> Intel Iris Xe o NVIDIA MX450 <br>
-    <strong>RAM:</strong> 16GB DDR4 <br>
-    <strong>Almacenamiento:</strong> 512GB / 1TB SSD <br>
-    <strong>Pantalla:</strong> 15.6" FHD IPS <br>
-    <strong>Uso ideal:</strong> Edición básica, multitarea intensiva <br>
-    <strong>Extras:</strong> Diseño delgado y elegante
-  </p>
-
-  <button onclick="añadirAlCarrito(this,'DELL INSPIRON BLUE 15 5510', '8500')">Añadir al carrito</button>
-</div>
-
-<div class="producto">
-  <img src="Imagenes/Laptop/HP 14-DQ2038MS.png" alt="HP 14-DQ2038MS" class="imagen-producto" width="300" height="230">
-
-  <div class="titulo-producto">
-    <h3><strong>HP 14-DQ2038MS</strong></h3>
-  </div>
-
-  <p class="descripcion-producto">
-    <strong>Procesador:</strong> Intel Celeron N4020 <br>
-    <strong>Gráfica:</strong> Intel UHD integrada <br>
-    <strong>RAM:</strong> 4GB DDR4 <br>
-    <strong>Almacenamiento:</strong> 64GB eMMC / 128GB SSD <br>
-    <strong>Pantalla:</strong> 14" HD (1366x768) <br>
-    <strong>Uso ideal:</strong> Navegación web, tareas básicas
-  </p>
-
-  <button onclick="añadirAlCarrito(this,'HP 14-DQ2038MS', '3000')">Añadir al carrito</button>
-</div>
-
-<div class="producto">
-  <img src="Imagenes/Laptop/NOTEBOOK15.6 HD.png" alt="NOTEBOOK 15.6 HD" class="imagen-producto" width="300" height="230">
-
-  <div class="titulo-producto">
-    <h3><strong>NOTEBOOK 15.6 HD</strong></h3>
-  </div>
-
-  <p class="descripcion-producto">
-    <strong>Procesador:</strong> AMD Ryzen 3 3250U <br>
-    <strong>Gráfica:</strong> Integrada UHD <br>
-    <strong>RAM:</strong> 8GB DDR4 <br>
-    <strong>Almacenamiento:</strong> 256GB SSD <br>
-    <strong>Pantalla:</strong> 15.6" HD <br>
-    <strong>Uso ideal:</strong> Estudio, oficina ligera
-  </p>
-
-  <button onclick="añadirAlCarrito(this,'NOTEBOOK 15.6 HD', '4560')">Añadir al carrito</button>
-</div>
-
-<div class="producto">
-  <img src="Imagenes/Laptop/ASUS ROG ZEPHYRUS G14.png" alt="ASUS ROG ZEPHYRUS G14" class="imagen-producto" width="300" height="230">
-
-  <div class="titulo-producto">
-    <h3><strong>ASUS ROG ZEPHYRUS G14</strong></h3>
-  </div>
-
-  <p class="descripcion-producto">
-    <strong>Procesador:</strong> AMD Ryzen 9 6900HS / 7940HS <br>
-    <strong>Gráfica:</strong> NVIDIA GeForce RTX 3060 / 4060 <br>
-    <strong>RAM:</strong> 16GB o 32GB DDR5 <br>
-    <strong>Almacenamiento:</strong> 1TB SSD NVMe <br>
-    <strong>Pantalla:</strong> 14" QHD 120Hz / FHD 144Hz <br>
-    <strong>Uso ideal:</strong> Gaming pro
-  </p>
-
-  <button onclick="añadirAlCarrito(this,'ASUS ROG ZEPHYRUS G14', '13500')">Añadir al carrito</button>
-</div>
-
-</div>    
-
-<div style="text-align: center;">
-  <a href="../Carrito/Carrito.html" class="boton-nav"
-   style="position: fixed; top: 20px; right: 20px; background-color: #333; color: white; padding: 10px 12px; border-radius: 8px; text-decoration: none; z-index: 1000;">
-  🛒 Ver carrito
-</a>
-
-<div style="text-align: center; margin-top: 60px;">
-  <a href="../index.html" class="boton-nav" 
-   style="position: fixed; top: 20px; left: 20px; background-color: #333; color: white; padding: 14px 20px; border-radius: 8px; text-decoration: none; z-index: 1000;">⬅
-  </a>
-</div>
-
+    <div style="text-align: center; margin-top: 60px;">
+      <a href="../index.html" class="boton-nav" 
+        style="position: fixed; top: 20px; left: 20px; background-color: #333; color: white; padding: 14px 20px; border-radius: 8px; text-decoration: none; z-index: 1000;">⬅
+      </a>
+    </div>
   </main>
+    <!-- Botón Para Subir -->
+  <script src="../Js/BotónParaSubir.js" defer></script>
+  </main>
+<!-- Barra De Búsqueda -->
+ <script src="Js/Buscador.js" defer></script>
+  <button id="btn-top">↑</button>
 </body>
 </html>
