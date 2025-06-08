@@ -1,152 +1,241 @@
+/* =======================
+   🎨 VARIABLES GLOBALES
+   ======================= */
 :root {
-    --color-texto: #ffffff;
-    --color-titulo1: #bc0f17;
-    --color-titulo2: #ffffff;
-    --color-titulo3: rgb(255, 255, 255);
-    --color-parrafo: rgb(252, 252, 252);
-    --color-text: rgb(255, 255, 255);
-    --font-sin-serif: Arial, Helvetica, sans-serif;
-    --fondo-body: rgb(12, 12, 12);
+  --color-texto: #ffffff;
+  --color-titulo1: #bc0f17;
+  --color-titulo2: #ffffff;
+  --color-titulo3: rgb(255, 255, 255);
+  --color-parrafo: rgb(252, 252, 252);
+  --color-text: rgb(255, 255, 255);
+  --font-sin-serif: Arial, Helvetica, sans-serif;
+  --fondo-body: rgb(12, 12, 12);
 }
+
+/* =======================
+   🔤 FUENTE PERSONALIZADA
+   ======================= */
+@font-face {
+  font-family: crackvetica;
+  src: url(../CSS/Tipografía/crackvetica/Crackvetica.ttf) format(truetype);
+}
+
+/* =======================
+   🔧 RESETEO GENERAL
+   ======================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =======================
+   🌌 ESTILOS GENERALES
+   ======================= */
+body {
+  background-image: url(/Imagenes/Fondo.png);
+  background-color: var(--fondo-body);
+  font-family: var(--font-sin-serif);
+  color: var(--color-texto);
+}
+
+h1, h2, h3 {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 5rem;
+  font-family: crackvetica;
+  color: var(--color-titulo1);
+}
+
+h2 {
+  font-size: 3rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: var(--color-titulo2);
+}
+
+h3 {
+  font-size: 2rem;
+  color: var(--color-titulo3);
+}
+
+p {
+  font-size: 1.2rem;
+  color: var(--color-parrafo);
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+label {
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+img {
+  text-align: center;
+  margin: 0;
+}
+
+/* =======================
+   🔗 Botones y Enlaces
+   ======================= */
+a.catalogo-card {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =======================
+   🛒 CATÁLOGO DE PRODUCTOS
+   ======================= */
+.catalogo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 0 auto;
+  padding: 10px;
+  max-width: 1000px;
+}
+
+/* Tarjeta del catálogo */
 .catalogo-card {
-  background-color: #8a8a8ac5;
+  background-color: transparent;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 280px;
-  height: 80px;
+  width: 300px;
   border: 1px solid #ffffff;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 8px #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-label {
-    color: var(--color-text);
-    text-align: center;
-    margin-bottom: 20px;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-image: url(/Imagenes/Fondo.png);
-    background-color: var(--fondo-body);
-    font-family: var(--font-sin-serif);
-    color: var(--color-texto);
-}
-@font-face {
-    font-family: crackvetica;
-    src: url(../CSS/Tipografía/crackvetica/Crackvetica.ttf) format(truetype);
-}
-h1 {
-    font-size: 5rem;
-    font-family: crackvetica;
-    color: var(--color-titulo1);
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 3rem;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    color: var(--color-titulo2);
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-h3 {
-    font-size: 2rem;
-    color: var(--color-titulo3);
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-img {
-    text-align: center;
-    margin: 0;
-}
-
-p {
-    font-size: 1.2rem;
-    color: var(--color-parrafo);
-    text-align: justify;
-    margin-bottom: 15px;
-}
-/* Animación del Catalogo */
 .catalogo-card:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 12px #ffffff;
 }
-/* Botones y enlaces */
+
+/* Imagen con efecto hover */
+.catalogo-card img,
+.catalogo-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+
+.catalogo-card:hover img,
+.catalogo-card:hover .catalogo-img {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.6);
+}
+
+/* Título con efecto neón */
+.catalogo-card h3 {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgba(138, 138, 138, 0.77);
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  color: white;
+  position: relative;
+  z-index: 1;
+  transition: 0.4s ease-in-out;
+  box-shadow: 0 4px 8px #ffffff;
+}
+
+.catalogo-card h3::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 10px;
+  background: linear-gradient(45deg, red, lime, blue);
+  z-index: -1;
+  filter: blur(5px);
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.catalogo-card h3:hover::before {
+  opacity: 1;
+}
+
+/* 🧩 Espaciado por si hay otros elementos */
+.catalogo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+/* 🌐 Responsive */
+@media (max-width: 992px) {
+  .catalogo-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .catalogo-card {
+    width: 90%;
+  }
+}
+
+/* =======================
+   🔘 BOTONES Y ENLACES
+   ======================= */
 button, .btn {
   padding: 10px 20px;
   background-color: #007BFF;
   color: white;
   border: none;
   border-radius: 8px;
-  transition: 0.3s;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  transform: scale(1);
 }
 
 button:hover, .btn:hover {
   background-color: #0056b3;
+  transform: scale(1.05);
   cursor: pointer;
 }
-/* Sombras */
-h1, h2, h3 {
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
-}
 
-button, .btn {
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-}
-/* Animación de Botones */
-button, .btn {
-  transition: all 0.3s ease;
-  transform: scale(1);
-}
-button:hover, .btn:hover {
-  transform: scale(1.05);
-}
-
-/* Carrito */
+/* =======================
+   🛍️ CARRITO DE COMPRAS
+   ======================= */
 #lista-carrito li {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 #lista-carrito li.eliminado {
-    opacity: 0;
-    transform: translateX(-50%);
-}
-/* Transiciones */
-* {
-  transition: all 0.2s ease-in-out;
-}
-/* Scroll */
-html {
-  scroll-behavior: smooth;
-}
-/* Carrusel */
-.partners-logos {
-    background: rgb(12, 12, 12);
-    padding: 20px 0;
-    text-align: center;
+  opacity: 0;
+  transform: translateX(-50%);
 }
 
-.slider-marcas img {
-    width: 100px;
-    margin: 0 auto;
-    filter: grayscale(100%);
-    transition: filter 0.3s;
-}
-
-.slider-marcas img:hover {
-    filter: grayscale(0%);
-}
+/* =======================
+   🧭 BOTÓN NAVEGACIÓN
+   ======================= */
 .boton-nav {
   display: inline-block;
   background: linear-gradient(135deg, #00ff95, #006eff);
@@ -168,23 +257,25 @@ html {
   transform: scale(1.05);
 }
 
-/* Botón Subir */
+/* =======================
+   🔝 BOTÓN "SUBIR"
+   ======================= */
 #btn-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 50px;           /* ancho fijo */
-  height: 50px;          /* alto fijo */
+  width: 50px;
+  height: 50px;
   background: #ffffff20;
   color: white;
   border: 1px solid white;
-  padding: 0;             /* quita padding extra */
-  font-size: 1.5rem;      /* ajusta tamaño de la flecha */
-  text-align: center;     /* centra la flecha */
-  line-height: 50px;      /* alinea vertical */
+  padding: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 50px;
   border-radius: 50%;
   cursor: pointer;
-  display: none;          /* se mostrará vía JS */
+  display: none;
   transition: background 0.3s;
   z-index: 1000;
 }
@@ -193,9 +284,31 @@ html {
   background: #ffffff40;
 }
 
+/* =======================
+   💻 CARRUSEL DE MARCAS
+   ======================= */
+.partners-logos {
+  background: rgb(12, 12, 12);
+  padding: 20px 0;
+  text-align: center;
+}
 
-/* Animación de Escritura */
+.slider-marcas img {
+  width: 100px;
+  margin: 0 auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s, transform 0.3s, box-shadow 0.3s;
+}
 
+.slider-marcas img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+/* =======================
+   ⌨️ EFECTO DE MÁQUINA DE ESCRIBIR
+   ======================= */
 .typewriter {
   overflow: hidden;
   border-right: .15em solid white;
@@ -204,28 +317,91 @@ html {
   letter-spacing: .1em;
   animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
 }
+
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from { width: 0; }
+  to { width: 100%; }
 }
+
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: white }
+  from, to { border-color: transparent; }
+  50% { border-color: white; }
 }
+
 .typewriter.done {
   border-right: none;
 }
+/* =======================
+   ℹ️ Información
+   ======================= */
+.info-box {
+  box-shadow: 0 0 20px #00ff80;
+  transition: box-shadow 0.3s ease;
+}
 
-/* Vista para Dispositivos Móviles */
+.info-box:hover {
+  box-shadow: 0 0 30px #00ff80;
+}
 
+/* =======================
+   🔍 LIGHTBOX
+   ======================= */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  animation: zoom 0.3s ease;
+  border-radius: 10px;
+}
+
+@keyframes zoom {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover {
+  color: #22c55e;
+}
+
+/* =======================
+   📱 RESPONSIVE (Dispositivos móviles)
+   ======================= */
 @media (max-width: 768px) {
-  button:not(#btn-top), .btn:not(#btn-top) {
-    width: 100%;
-  }
   h1 { font-size: 3rem; }
   h2 { font-size: 2rem; }
   h3 { font-size: 1.4rem; }
   p  { font-size: 1rem; }
+
+  button:not(#btn-top), .btn:not(#btn-top) {
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px;
+  }
 
   .catalogo-card {
     width: 90%;
@@ -245,12 +421,6 @@ html {
     width: 80px;
   }
 
-  button, .btn {
-    width: 100%;
-    font-size: 1rem;
-    padding: 10px;
-  }
-
   section {
     padding: 10px;
   }
@@ -262,16 +432,39 @@ html {
   }
 
   #btn-top {
-  bottom: 15px;
-  right: 15px;
-  width: 45px; 
-  height: 45px;
-  line-height: 45px;
-  padding: 0;
-}
+    bottom: 15px;
+    right: 15px;
+    width: 45px; 
+    height: 45px;
+    line-height: 45px;
+    padding: 0;
+  }
 
   .typewriter {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 0 5px;
+  }
+
+  .slider-marcas img:active {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+  }
+
+  .catalogo-card:active {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px #ffffff;
+  }
+
+  button:active, .btn:active {
+    background-color: #004ba0;
+    transform: scale(0.97);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .boton-nav:active {
+    background: linear-gradient(135deg, #00c8c8, #0004cc);
+    box-shadow: 0 0 20px #00ff95;
+    transform: scale(0.98);
   }
 }
