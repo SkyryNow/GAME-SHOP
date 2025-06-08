@@ -108,20 +108,70 @@ body {
   width: 100%;
   box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
-/* Botones y enlaces */
+/* 🔘 BOTONES GENERALES */
 button, .btn {
-  padding: 10px 20px;
-  background-color: #007BFF;
-  color: white;
+  padding: 12px 22px;
+  background-color: var(--color-titulo1);
+  color: var(--color-texto);
   border: none;
-  border-radius: 8px;
-  transition: 0.3s;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: var(--font-sin-serif);
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.4), inset 0 0 5px rgba(255,255,255,0.05);
+  transition: all 0.3s ease;
+  transform: scale(1);
+  letter-spacing: 0.5px;
 }
 
 button:hover, .btn:hover {
-  background-color: #0056b3;
+  background-color: var(--color-titulo2);
+  box-shadow: 0 0 12px var(--color-titulo2), 0 0 6px rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
   cursor: pointer;
 }
+/* 🎯 BOTONES ESPECÍFICOS DEL CARRITO Y MODAL */
+form button,
+.modal-botones button,
+.carrito-control button {
+  background-color: var(--color-titulo1);
+  color: var(--color-titulo3);
+  box-shadow: 0 0 10px var(--color-titulo1);
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 12px 20px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+form button:hover,
+.modal-botones button:hover,
+.carrito-control button:hover {
+  background-color: var(--color-titulo2);
+  box-shadow: 0 0 12px var(--color-titulo2), inset 0 0 6px rgba(255,255,255,0.1);
+  transform: scale(1.06);
+}
+
+/* 🔄 BOTÓN "Volver al inicio" o enlaces similares */
+a.btn {
+  display: inline-block;
+  text-align: center;
+  background-color: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 10px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+a.btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+
 /* Método de Pago */
 #metodo-pago {
   width: 100%;
