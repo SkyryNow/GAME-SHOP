@@ -6,217 +6,209 @@
   <link rel="stylesheet" href="../Páginas/CSS/style.css">
   <script src="../Carrito/Js/Carrito.js" defer></script> 
 </head>
-<div id="notificacion" style="position: fixed; top: 20px; left: 100px; background: #333; color: white; padding: 10px; border-radius: 8px; display: none; z-index: 999;"></div>
 <body>
+
+<!-- Notificación flotante -->
+<div id="notificacion" style="position: fixed; top: 20px; left: 100px; background: #333; color: white; padding: 10px; border-radius: 8px; display: none; z-index: 999;"></div>
 
 <h1>Componentes</h1>
 
-  <main>
-    
+<!-- 🔍 Barra de Búsqueda -->
+<div class="contenedor-busqueda">
+  <input type="text" id="busqueda" placeholder="🔍 Buscar componentes..." onkeyup="filtrarProductos()">
+</div>
+
+<main>
   <hr style="border: none; height: 10px; background: linear-gradient(to right, #f00, #0f0, #00f); border-radius: 2px;">
+
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; padding: 20px;">
 
-  <!-- 1. Procesador Intel Core i5-12400F -->
-<div class="producto">
-  <img src="Imagenes/Componentes/i5-12400F.png" alt="Intel Core i5-12400F" class="imagen-producto" width="130" height="130">
-
-  <div class="titulo-producto">
-    <h3><strong>Intel Core i5-12400F</strong></h3>
-  </div>
-
-  <p class="descripcion-producto">
-    <strong>Tipo:</strong> CPU de escritorio <br>
-    <strong>Socket:</strong> LGA 1700 <br>
-    <strong>Núcleos/Hilos:</strong> 6/12 <br>
-    <strong>Frecuencia:</strong> 2.5 - 4.4 GHz <br>
-    <strong>Gráficos:</strong> No integrados <br>
-    <strong>Uso ideal:</strong> Gaming, productividad media
-  </p>
-
-  <button onclick="añadirAlCarrito(this,'Intel Core i5-12400F', '870')">Añadir al carrito</button>
-</div>
-
-<!-- 2. AMD Ryzen 5 5600X -->
-<div class="producto">
-  <img src="Imagenes/Componentes/Ryzen-5600X.png" alt="Ryzen 5 5600X" class="imagen-producto" width="250" height="230">
-
-  <div class="titulo-producto">
-    <h3><strong>Ryzen 5 5600X</strong></h3>
-  </div>
-
-  <p class="descripcion-producto">
-    <strong>Tipo:</strong> CPU de escritorio <br>
-    <strong>Socket:</strong> AM4 <br>
-    <strong>Núcleos/Hilos:</strong> 6/12 <br>
-    <strong>Frecuencia:</strong> 3.7 - 4.6 GHz <br>
-    <strong>Gráficos:</strong> No integrados <br>
-    <strong>Uso ideal:</strong> Gaming de alto rendimiento
-  </p>
-
-  <button onclick="añadirAlCarrito(this,'Ryzen 5 5600X', '950')">Añadir al carrito</button>
-</div>
-
-<!-- 3. RAM Corsair Vengeance LPX 16GB -->
-<div class="producto">
-  <img src="Imagenes/Componentes/RAM-Corsair-Vengeance.png" alt="RAM Corsair Vengeance" class="imagen-producto" width="320" height="210">
-
-  <div class="titulo-producto">
-    <h3><strong>RAM Corsair Vengeance 16GB</strong></h3>
-  </div>
-
-  <p class="descripcion-producto">
-    <strong>Tipo:</strong> DDR4 <br>
-    <strong>Frecuencia:</strong> 3200MHz <br>
-    <strong>Latencia:</strong> CL16 <br>
-    <strong>Voltaje:</strong> 1.35V <br>
-    <strong>Uso ideal:</strong> Gaming y multitarea
-  </p>
-
-  <button onclick="añadirAlCarrito(this,'RAM Corsair Vengeance 16GB', '420')">Añadir al carrito</button>
-</div>
-
-<!-- 4. GPU NVIDIA GeForce RTX 3060 -->
-<div class="producto">
-  <img src="Imagenes/Componentes/RTX3060.png" alt="NVIDIA RTX 3060" class="imagen-producto" width="350" height="230">
-
-  <div class="titulo-producto">
-    <h3><strong>NVIDIA RTX 3060</strong></h3>
-  </div>
-
-  <p class="descripcion-producto">
-    <strong>Tipo:</strong> GPU dedicada <br>
-    <strong>Memoria:</strong> 12GB GDDR6 <br>
-    <strong>Interfaz:</strong> PCIe 4.0 <br>
-    <strong>Ray Tracing:</strong> Sí <br>
-    <strong>Uso ideal:</strong> Juegos AAA en alta calidad
-  </p>
-
-  <button onclick="añadirAlCarrito(this,'NVIDIA RTX 3060', '2400')">Añadir al carrito</button>
-</div>
-
-<!-- 5. GPU AMD Radeon RX 6700 XT -->
-<div class="producto">
-  <img src="Imagenes/Componentes/RX-6700XT.png" alt="Radeon RX 6700 XT" class="imagen-producto" width="260" height="180">
-
-  <div class="titulo-producto">
-    <h3><strong>Radeon RX 6700 XT</strong></h3>
-  </div>
-
-  <p class="descripcion-producto">
-    <strong>Tipo:</strong> GPU dedicada <br>
-    <strong>Memoria:</strong> 12GB GDDR6 <br>
-    <strong>Ray Tracing:</strong> Sí <br>
-    <strong>Interfaz:</strong> PCIe 4.0 <br>
-    <strong>Uso ideal:</strong> Juegos 1440p, multitarea intensiva
-  </p>
-
-  <button onclick="añadirAlCarrito(this,'Radeon RX 6700 XT', '2650')">Añadir al carrito</button>
-</div>
-
-<!-- 6. Tarjeta Gráfica NVIDIA GTX 1660 SUPER -->
-<div class="producto">
-  <img src="Imagenes/Componentes/NVIDIA_GTX1660Super.png" alt="NVIDIA GTX 1660 SUPER" class="imagen-producto" width="260" height="180">
-
-  <div class="titulo-producto">
-    <h3><strong>Tarjeta Gráfica NVIDIA GTX 1660 SUPER</strong></h3>
-  </div>
-
-  <p class="descripcion-producto">
-    <strong>Memoria:</strong> 6GB GDDR6 <br>
-    <strong>Velocidad de memoria:</strong> 14 Gbps <br>
-    <strong>Interfaz:</strong> 192-bit <br>
-    <strong>Conectividad:</strong> HDMI, DisplayPort, DVI-D <br>
-    <strong>Uso ideal:</strong> Gaming 1080p
-  </p>
-
-  <button onclick="añadirAlCarrito(this,'Tarjeta Gráfica NVIDIA GTX 1660 SUPER', '820')">Añadir al carrito</button>
-</div>
-
-<!-- 7. Power Bank 20000mAh -->
-<div class="producto">
-  <img src="Imagenes/Componentes/PowerBank_20000mAh.png" alt="Power Bank 20000mAh" class="imagen-producto" width="250" height="230">
-
-  <div class="titulo-producto">
-    <h3><strong>Power Bank 20000mAh</strong></h3>
-  </div>
-
-  <p class="descripcion-producto">
-    <strong>Capacidad:</strong> 20000mAh <br>
-    <strong>Puertos:</strong> 2 USB-A, 1 USB-C <br>
-    <strong>Tiempo de carga:</strong> 6-8 horas <br>
-    <strong>Extras:</strong> Linterna LED, indicador de carga digital
-  </p>
-
-  <button onclick="añadirAlCarrito(this,'Power Bank 20000mAh', '120')">Añadir al carrito</button>
-</div>
-
-<!-- 8. Memoria RAM Kingston Fury 16GB -->
-<div class="producto">
-  <img src="Imagenes/Componentes/RAM_Kingston_16GB.png" alt="Memoria RAM Kingston Fury 16GB" class="imagen-producto" width="290" height="190">
-
-  <div class="titulo-producto">
-    <h3><strong>Memoria RAM Kingston Fury 16GB</strong></h3>
-  </div>
-
-  <p class="descripcion-producto">
-    <strong>Tipo:</strong> DDR4 <br>
-    <strong>Velocidad:</strong> 3200 MHz <br>
-    <strong>Formato:</strong> DIMM <br>
-    <strong>Compatibilidad:</strong> Intel y AMD <br>
-    <strong>Uso ideal:</strong> Gaming y multitarea
-  </p>
-
-  <button onclick="añadirAlCarrito(this,'Memoria RAM Kingston Fury 16GB', '215')">Añadir al carrito</button>
-</div>
-
-<!-- 9. Disco SSD Samsung 1TB NVMe -->
-<div class="producto">
-  <img src="Imagenes/Componentes/SSD_Samsung_1TB.png" alt="Disco SSD Samsung 1TB" class="imagen-producto" width="300" height="230">
-
-  <div class="titulo-producto">
-    <h3><strong>Disco SSD Samsung 1TB NVMe</strong></h3>
-  </div>
-
-  <p class="descripcion-producto">
-    <strong>Tipo:</strong> NVMe M.2 <br>
-    <strong>Velocidad lectura/escritura:</strong> 3500/3000 MB/s <br>
-    <strong>Capacidad:</strong> 1TB <br>
-    <strong>Compatibilidad:</strong> PCIe Gen 3.0
-  </p>
-
-  <button onclick="añadirAlCarrito(this,'Disco SSD Samsung 1TB NVMe', '345')">Añadir al carrito</button>
-</div>
-
-<!-- 10. Disco Duro Externo Seagate 2TB -->
-<div class="producto">
-  <img src="Imagenes/Componentes/DiscoDuro_Seagate_2TB.png" alt="Disco Duro Externo Seagate 2TB" class="imagen-producto" width="350" height="230">
-
-  <div class="titulo-producto">
-    <h3><strong>Disco Duro Externo Seagate 2TB</strong></h3>
-  </div>
-
-  <p class="descripcion-producto">
-    <strong>Tipo:</strong> HDD portátil <br>
-    <strong>Capacidad:</strong> 2TB <br>
-    <strong>Conectividad:</strong> USB 3.0 <br>
-    <strong>Velocidad:</strong> 120 MB/s <br>
-    <strong>Uso ideal:</strong> Almacenamiento y respaldo de datos
-    </p>
-    </div>
+    <!-- Productos -->
+    <!-- 1. Procesador Intel Core i5-12400F -->
+    <div class="producto">
+      <img src="Imagenes/Componentes/i5-12400F.png" alt="Intel Core i5-12400F" class="imagen-producto">
+      <div class="titulo-producto">
+        <h3><strong>Intel Core i5-12400F</strong></h3>
+      </div>
+      <p class="descripcion-producto">
+        <strong>Tipo:</strong> CPU de escritorio <br>
+        <strong>Socket:</strong> LGA 1700 <br>
+        <strong>Núcleos/Hilos:</strong> 6/12 <br>
+        <strong>Frecuencia:</strong> 2.5 - 4.4 GHz <br>
+        <strong>Gráficos:</strong> No integrados <br>
+        <strong>Uso ideal:</strong> Gaming, productividad media
+      </p>
+      <button onclick="añadirAlCarrito(this,'Intel Core i5-12400F', '180')">Añadir al carrito</button>
+<p class="precio-producto">Precio: $180 (Bs. 3,060)</p>
     </div>
 
-<div style="text-align: center;">
+    <!-- 2. AMD Ryzen 5 5600X -->
+    <div class="producto">
+      <img src="Imagenes/Componentes/Ryzen-5600X.png" alt="Ryzen 5 5600X" class="imagen-producto">
+      <div class="titulo-producto">
+        <h3><strong>Ryzen 5 5600X</strong></h3>
+      </div>
+      <p class="descripcion-producto">
+        <strong>Tipo:</strong> CPU de escritorio <br>
+        <strong>Socket:</strong> AM4 <br>
+        <strong>Núcleos/Hilos:</strong> 6/12 <br>
+        <strong>Frecuencia:</strong> 3.7 - 4.6 GHz <br>
+        <strong>Gráficos:</strong> No integrados <br>
+        <strong>Uso ideal:</strong> Gaming de alto rendimiento
+      </p>
+      <button onclick="añadirAlCarrito(this,'Ryzen 5 5600X', '190')">Añadir al carrito</button>
+<p class="precio-producto">Precio: $190 (Bs. 3,230)</p>
+    </div>
+
+    <!-- 3. RAM Corsair Vengeance LPX 16GB -->
+    <div class="producto">
+      <img src="Imagenes/Componentes/RAM-Corsair-Vengeance.png" alt="RAM Corsair Vengeance" class="imagen-producto">
+      <div class="titulo-producto">
+        <h3><strong>RAM Corsair Vengeance 16GB</strong></h3>
+      </div>
+      <p class="descripcion-producto">
+        <strong>Tipo:</strong> DDR4 <br>
+        <strong>Frecuencia:</strong> 3200MHz <br>
+        <strong>Latencia:</strong> CL16 <br>
+        <strong>Voltaje:</strong> 1.35V <br>
+        <strong>Uso ideal:</strong> Gaming y multitarea
+      </p>
+      <button onclick="añadirAlCarrito(this,'RAM Corsair Vengeance 16GB', '55')">Añadir al carrito</button>
+<p class="precio-producto">Precio: $55 (Bs. 935)</p>
+    </div>
+
+    <!-- 4. GPU NVIDIA GeForce RTX 3060 -->
+    <div class="producto">
+      <img src="Imagenes/Componentes/RTX3060.png" alt="NVIDIA RTX 3060" class="imagen-producto">
+      <div class="titulo-producto">
+        <h3><strong>NVIDIA RTX 3060</strong></h3>
+      </div>
+      <p class="descripcion-producto">
+        <strong>Tipo:</strong> GPU dedicada <br>
+        <strong>Memoria:</strong> 12GB GDDR6 <br>
+        <strong>Interfaz:</strong> PCIe 4.0 <br>
+        <strong>Ray Tracing:</strong> Sí <br>
+        <strong>Uso ideal:</strong> Juegos AAA en alta calidad
+      </p>
+      <button onclick="añadirAlCarrito(this,'NVIDIA RTX 3060', '320')">Añadir al carrito</button>
+<p class="precio-producto">Precio: $320 (Bs. 5,440)</p>
+    </div>
+
+    <!-- 5. GPU AMD Radeon RX 6700 XT -->
+    <div class="producto">
+      <img src="Imagenes/Componentes/RX-6700XT.png" alt="Radeon RX 6700 XT" class="imagen-producto">
+      <div class="titulo-producto">
+        <h3><strong>Radeon RX 6700 XT</strong></h3>
+      </div>
+      <p class="descripcion-producto">
+        <strong>Tipo:</strong> GPU dedicada <br>
+        <strong>Memoria:</strong> 12GB GDDR6 <br>
+        <strong>Ray Tracing:</strong> Sí <br>
+        <strong>Interfaz:</strong> PCIe 4.0 <br>
+        <strong>Uso ideal:</strong> Juegos 1440p, multitarea intensiva
+      </p>
+      <button onclick="añadirAlCarrito(this,'Radeon RX 6700 XT', '360')">Añadir al carrito</button>
+<p class="precio-producto">Precio: $360 (Bs. 6,120)</p>
+    </div>
+
+    <!-- 6. Tarjeta Gráfica NVIDIA GTX 1660 SUPER -->
+    <div class="producto">
+      <img src="Imagenes/Componentes/NVIDIA_GTX1660Super.png" alt="NVIDIA GTX 1660 SUPER" class="imagen-producto">
+      <div class="titulo-producto">
+        <h3><strong>Tarjeta Gráfica NVIDIA GTX 1660 SUPER</strong></h3>
+      </div>
+      <p class="descripcion-producto">
+        <strong>Memoria:</strong> 6GB GDDR6 <br>
+        <strong>Velocidad de memoria:</strong> 14 Gbps <br>
+        <strong>Interfaz:</strong> 192-bit <br>
+        <strong>Conectividad:</strong> HDMI, DisplayPort, DVI-D <br>
+        <strong>Uso ideal:</strong> Gaming 1080p
+      </p>
+      <button onclick="añadirAlCarrito(this,'Tarjeta Gráfica NVIDIA GTX 1660 SUPER', '160')">Añadir al carrito</button>
+<p class="precio-producto">Precio: $160 (Bs. 2,720)</p>
+    </div>
+
+    <!-- 7. Power Bank 20000mAh -->
+    <div class="producto">
+      <img src="Imagenes/Componentes/PowerBank_20000mAh.png" alt="Power Bank 20000mAh" class="imagen-producto">
+      <div class="titulo-producto">
+        <h3><strong>Power Bank 20000mAh</strong></h3>
+      </div>
+      <p class="descripcion-producto">
+        <strong>Capacidad:</strong> 20000mAh <br>
+        <strong>Puertos:</strong> 2 USB-A, 1 USB-C <br>
+        <strong>Tiempo de carga:</strong> 6-8 horas <br>
+        <strong>Extras:</strong> Linterna LED, indicador de carga digital
+      </p>
+      <button onclick="añadirAlCarrito(this,'Power Bank 20000mAh', '20')">Añadir al carrito</button>
+<p class="precio-producto">Precio: $20 (Bs. 340)</p>
+
+    </div>
+
+    <!-- 8. Memoria RAM Kingston Fury 16GB -->
+    <div class="producto">
+      <img src="Imagenes/Componentes/RAM_Kingston_16GB.png" alt="Memoria RAM Kingston Fury 16GB" class="imagen-producto">
+      <div class="titulo-producto">
+        <h3><strong>Memoria RAM Kingston Fury 16GB</strong></h3>
+      </div>
+      <p class="descripcion-producto">
+        <strong>Tipo:</strong> DDR4 <br>
+        <strong>Velocidad:</strong> 3200 MHz <br>
+        <strong>Formato:</strong> DIMM <br>
+        <strong>Compatibilidad:</strong> Intel y AMD <br>
+        <strong>Uso ideal:</strong> Gaming y multitarea
+      </p>
+      <button onclick="añadirAlCarrito(this,'Disco SSD Samsung 1TB NVMe', '75')">Añadir al carrito</button>
+<p class="precio-producto">Precio: $75 (Bs. 1,275)</p>
+    </div>
+
+    <!-- 9. Disco SSD Samsung 1TB NVMe -->
+    <div class="producto">
+      <img src="Imagenes/Componentes/SSD_Samsung_1TB.png" alt="Disco SSD Samsung 1TB" class="imagen-producto">
+      <div class="titulo-producto">
+        <h3><strong>Disco SSD Samsung 1TB NVMe</strong></h3>
+      </div>
+      <p class="descripcion-producto">
+        <strong>Tipo:</strong> NVMe M.2 <br>
+        <strong>Velocidad lectura/escritura:</strong> 3500/3000 MB/s <br>
+        <strong>Capacidad:</strong> 1TB <br>
+        <strong>Compatibilidad:</strong> PCIe Gen 3.0
+      </p>
+      <button onclick="añadirAlCarrito(this,'Disco Duro Externo Seagate 2TB', '60')">Añadir al carrito</button>
+<p class="precio-producto">Precio: $60 (Bs. 1,020)</p>
+    </div>
+
+    <!-- 10. Disco Duro Externo Seagate 2TB -->
+    <div class="producto">
+      <img src="Imagenes/Componentes/DiscoDuro_Seagate_2TB.png" alt="Disco Duro Externo Seagate 2TB" class="imagen-producto">
+      <div class="titulo-producto">
+        <h3><strong>Disco Duro Externo Seagate 2TB</strong></h3>
+      </div>
+      <p class="descripcion-producto">
+        <strong>Tipo:</strong> HDD portátil <br>
+        <strong>Capacidad:</strong> 2TB <br>
+        <strong>Conectividad:</strong> USB 3.0 <br>
+        <strong>Velocidad:</strong> 120 MB/s <br>
+        <strong>Uso ideal:</strong> Almacenamiento y respaldo de datos
+      </p>
+      <button onclick="añadirAlCarrito(this,'Disco Duro Externo Seagate 2TB', '345')">Añadir al carrito</button>
+      <p class="precio-producto">Precio: $345 (Bs. 5,865)</p>
+    </div>
+  </div>
+
+  <!-- Botones flotantes -->
   <a href="../Carrito/Carrito.html" class="boton-nav"
-   style="position: fixed; top: 20px; right: 20px; background-color: #333; color: white; padding: 10px 12px; border-radius: 8px; text-decoration: none; z-index: 1000;">
-  🛒 Ver carrito
-</a>
-
-<div style="text-align: center; margin-top: 60px;">
-  <a href="../index.html" class="boton-nav" 
-   style="position: fixed; top: 20px; left: 20px; background-color: #333; color: white; padding: 14px 20px; border-radius: 8px; text-decoration: none; z-index: 1000;">⬅
+     style="position: fixed; top: 20px; right: 20px; background-color: #333; color: white; padding: 10px 12px; border-radius: 8px; text-decoration: none; z-index: 1000;">
+    🛒 Ver carrito
   </a>
-</div>
+
+  <a href="../index.html" class="boton-nav" 
+     style="position: fixed; top: 20px; left: 20px; background-color: #333; color: white; padding: 14px 20px; border-radius: 8px; text-decoration: none; z-index: 1000;">
+    ⬅
+  </a>
 
 </main>
+<!-- Barra De Búsqueda -->
+ <script src="Js/Buscador.js" defer></script>
 </body>
 </html>
