@@ -44,7 +44,7 @@ body {
   color: var(--color-texto);
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
   text-align: center;
   margin-bottom: 20px;
@@ -109,7 +109,9 @@ a.catalogo-card {
   max-width: 1000px;
 }
 
-/* Tarjeta del catálogo */
+/* =======================
+    Tarjeta del catálogo 
+   ======================= */
 .catalogo-card {
   background-color: transparent;
   color: white;
