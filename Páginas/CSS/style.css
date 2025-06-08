@@ -211,6 +211,32 @@ label, strong {
   text-decoration: none;
   z-index: 1000;
 }
+/* =======================
+   🔝 BOTÓN "SUBIR"
+   ======================= */
+#btn-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: #ffffff20;
+  color: white;
+  border: 1px solid white;
+  padding: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  transition: background 0.3s;
+  z-index: 1000;
+}
+
+#btn-top:hover {
+  background: #ffffff40;
+}
 
 /* =======================
    📱 Responsive / Móviles
@@ -273,7 +299,7 @@ label, strong {
   border: none;
   height: 10px;
   background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-  border-radius: 8px;
-  margin: 30px auto;
-  max-width: 90%;
+  border-radius: 2px;
+  margin: 0;
+  max-width: 100vw;
 }
