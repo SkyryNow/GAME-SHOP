@@ -246,9 +246,18 @@ label, strong {
   h2 { font-size: 2rem; }
   h3 { font-size: 1.1rem; }
   p  { font-size: 0.9rem; }
-  .producto { width: 90%; }
-  .seccion-productos { padding: 10px; gap: 20px; }
-  button, .btn { width: 100%; }
+  .producto {
+  width: 45%; /* (Dos) productos por fila */
+  }
+
+  .seccion-productos {
+    padding: 10px;
+    gap: 15px; /* Más compacto en móviles */
+    justify-content: space-around; /* Distribuye de forma pareja */
+  }
+  button, .btn { 
+    width: 100%; 
+  }
 }
 
 /* =======================
