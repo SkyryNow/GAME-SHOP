@@ -247,7 +247,7 @@ label, strong {
   h3 { font-size: 1.1rem; }
   p  { font-size: 0.9rem; }
   .producto {
-  width: 45%; /* (Dos) productos por fila */
+  width: 60%; /* (Dos) productos por fila */
   }
 
   .seccion-productos {
