@@ -20,7 +20,7 @@
 /* 🌌 Fondo y tipografía base */
 body {
   background-color: var(--fondo-body);
-  background-image: url(/Carrito/Fondo.png);
+  background-image: url(../Fondo.png);
   font-family: var(--font-sin-serif);
   color: var(--color-texto);
   padding: 20px;
@@ -148,3 +148,4 @@ button:hover, .btn:hover {
     display: block;
   }
 }
+
