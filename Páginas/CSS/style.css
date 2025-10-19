@@ -104,6 +104,31 @@ p {
   transform: scale(1.05);
 }
 
+.boton-nav {
+  height: 80px;
+  width: 80px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #333;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  z-index: 1000;
+  font-weight: bold;
+  font-size: 2rem !important; /* tamaño del texto */
+  line-height: 50px; /* centra vertical el texto dentro del botón */
+  text-align: center;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton-nav:hover {
+  background-color: #555;
+  transform: scale(1.05);
+}
+
 /* =======================
  🔍 Buscador de productos 
    ======================= */
