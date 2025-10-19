@@ -12,9 +12,10 @@ btnTop.addEventListener("click", () => {
 });
 
 btnCarrito.addEventListener("click", () => {
-  window.location.href = "../Carrito/Carrito.html";
+  window.location.href = "/Carrito/Carrito.html";
 });
 
 setTimeout(() => {
   document.querySelector('.typewriter').classList.add('done');
 }, 3100);
+
