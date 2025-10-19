@@ -9,7 +9,6 @@
   --color-parrafo: rgb(252, 252, 252);
   --color-text: rgb(255, 255, 255);
   --font-sin-serif: Arial, Helvetica, sans-serif;
-  --fondo-body: rgb(12, 12, 12);
 }
 
 /* =======================
@@ -39,7 +38,6 @@ html {
    ======================= */
 body {
   background-image: url(/Imagenes/Fondo.png);
-  background-color: var(--fondo-body);
   font-family: var(--font-sin-serif);
   color: var(--color-texto);
 }
@@ -497,3 +495,4 @@ button:hover, .btn:hover {
     transform: scale(0.98);
   }
 }
+
