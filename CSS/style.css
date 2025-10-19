@@ -470,7 +470,7 @@ button:hover, .btn:hover {
   }
 
 }  #btn-carrito {
-    bottom: 15px;
+    bottom: 80px;
     right: 15px;
     width: 45px; 
     height: 45px;
@@ -593,6 +593,7 @@ footer > div {
     padding: 20px 10px;
   }
 }
+
 
 
 
