@@ -469,6 +469,15 @@ button:hover, .btn:hover {
     padding: 0;
   }
 
+}  #btn-carrito {
+    bottom: 15px;
+    right: 15px;
+    width: 45px; 
+    height: 45px;
+    line-height: 45px;
+    padding: 0;
+  }
+
   .typewriter {
     font-size: 1rem;
     padding: 0 5px;
@@ -584,5 +593,6 @@ footer > div {
     padding: 20px 10px;
   }
 }
+
 
 
