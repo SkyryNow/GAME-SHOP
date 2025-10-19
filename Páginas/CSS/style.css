@@ -44,7 +44,7 @@ body {
   font-family: var(--fuente-general);
   background-color: var(--color-fondo);
   color: var(--color-blanco);
-  background-image: url(../Páginas/Imagenes/Fondo.png);
+  background-image: url(../Imagenes/Fondo.png);
   background-size: cover;
   background-attachment: fixed;
   padding-bottom: 60px;
@@ -312,4 +312,5 @@ label, strong {
   margin: 0;
   max-width: 100vw;
 }
+
 
