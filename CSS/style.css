@@ -38,7 +38,7 @@ html {
    🌌 ESTILOS GENERALES
    ======================= */
 body {
-  background-image: url(/Imagenes/Fondo.png);
+  background-image: url(../Imagenes/Fondo.png);
   background-color: var(--fondo-body);
   font-family: var(--font-sin-serif);
   color: var(--color-texto);
@@ -497,3 +497,4 @@ button:hover, .btn:hover {
     transform: scale(0.98);
   }
 }
+
