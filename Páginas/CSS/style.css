@@ -20,7 +20,7 @@
    ======================= */
 @font-face {
   font-family: crackvetica;
-  src: url(../Páginas/Tipografía/crackvetica/Crackvetica.ttf) format('truetype');
+  src: url(/CSS/Tipografía/crackvetica/Crackvetica.ttf) format('truetype');
 }
 
 /* =======================
@@ -79,6 +79,29 @@ p {
   color: var(--color-gris);
   text-align: justify;
   margin-bottom: 15px;
+}
+
+.boton-nav-carrito {
+  height: 80px;
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  z-index: 1000;
+  font-weight: bold;
+  font-size: 1.2rem; /* tamaño del texto */
+  line-height: 55px; /* centra vertical el texto dentro del botón */
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton-nav-carrito:hover {
+  background-color: #555;
+  transform: scale(1.05);
 }
 
 /* =======================
@@ -259,7 +282,6 @@ label, strong {
     width: 100%; 
   }
 }
-
 /* =======================
    🧩 Página Componentes
    ======================= */
@@ -312,5 +334,3 @@ label, strong {
   margin: 0;
   max-width: 100vw;
 }
-
-
