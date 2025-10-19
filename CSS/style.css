@@ -502,7 +502,7 @@ button:hover, .btn:hover {
    ======================= */
 footer {
   background-color: #131212;
-  background-image: url(/Imagenes/Fondo2_1.png);
+  background-image: url(../Imagenes/Fondo2_1.png);
   padding: 40px 20px;
   margin-top: 60px;
   border-radius: 10px;
@@ -584,3 +584,4 @@ footer > div {
     padding: 20px 10px;
   }
 }
+
