@@ -285,6 +285,31 @@ button:hover, .btn:hover {
 #btn-top:hover {
   background: #ffffff40;
 }
+/* =======================
+   🔝 BOTÓN "CARRITO"
+   ======================= */
+#btn-carrito {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: #ffffff20;
+  color: white;
+  border: 1px solid white;
+  padding: 0;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  transition: background 0.3s;
+  z-index: 1000;
+}
+#btn-carrito:hover {
+  background: #ffffff40;
+}
 
 /* =======================
    🛒 BOTÓN "CARRITO"
@@ -465,16 +490,17 @@ button:hover, .btn:hover {
     right: 15px;
     width: 45px; 
     height: 45px;
-    line-height: 45px;
+    line-height: 15px;
     padding: 0;
-  }
 
-}  #btn-carrito {
+  }  
+   
+   #btn-carrito {
     bottom: 80px;
     right: 15px;
-    width: 45px; 
-    height: 45px;
-    line-height: 45px;
+    width: 45px !important; 
+    height: 45px !important;
+    line-height: 25px;
     padding: 0;
   }
 
@@ -593,6 +619,7 @@ footer > div {
     padding: 20px 10px;
   }
 }
+
 
 
 
