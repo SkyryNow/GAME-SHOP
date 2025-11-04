@@ -2,69 +2,214 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>GABINETES</title>
+  <title>COMPONENTES</title>
   <link rel="icon" href="/Imagenes/GameShop_Logo.png">
   <link rel="stylesheet" href="../Páginas/CSS/style.css">
   <script src="../Carrito/Js/Carrito.js" defer></script> 
 </head>
 <body>
-  <div id="notificacion" style="position: fixed; top: 20px; left: 100px; background: #333; color: white; padding: 10px; border-radius: 8px; display: none; z-index: 999;"></div>
-  
-  <h1>Gabinetes</h1>
-  <!-- 🔍 Barra de Búsqueda -->
+
+<!-- Notificación flotante -->
+<div id="notificacion" style="position: fixed; top: 20px; left: 100px; background: #333; color: white; padding: 10px; border-radius: 8px; display: none; z-index: 999;"></div>
+
+<h1>Componentes</h1>
+
+<!-- 🔍 Barra de Búsqueda -->
 <div class="contenedor-busqueda">
   <input type="text" id="busqueda" placeholder="🔍 Buscar componentes..." onkeyup="filtrarProductos()">
-  </div>
-  <main>
-    
-   <hr class="separador-colorido">
+</div>
+
+<main>
+  <hr class="separador-colorido">
 
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; padding: 20px;">
 
-  <div class="producto">
-    <img src="Imagenes/Gabinetes/NZXT H510.png" alt="NZXT H510" class="imagen-producto" width="200" height="170">
-    <div class="titulo-producto">
-      <h3><strong>NZXT H510</strong></h3>
+    <!-- Productos -->
+    <!-- 1. Procesador Intel Core i5-12400F -->
+    <div class="producto">
+      <img src="Imagenes/Componentes/i5-12400F.png" alt="Intel Core i5-12400F" class="imagen-producto">
+      <div class="titulo-producto">
+        <h3><strong>Intel Core i5-12400F</strong></h3>
+      </div>
+      <p class="descripcion-producto">
+        <strong>Tipo:</strong> CPU de escritorio <br>
+        <strong>Socket:</strong> LGA 1700 <br>
+        <strong>Núcleos/Hilos:</strong> 6/12 <br>
+        <strong>Frecuencia:</strong> 2.5 - 4.4 GHz <br>
+        <strong>Gráficos:</strong> No integrados <br>
+        <strong>Uso ideal:</strong> Gaming, productividad media
+      </p>
+      <button onclick="añadirAlCarrito(this,'Intel Core i5-12400F', '3060')">Añadir al carrito</button>
+<p class="precio-producto">Precio: Bs. 3,060</p>
     </div>
-    <p class="descripcion-producto">
-      <strong>Compatibilidad:</strong> ATX, Micro-ATX, Mini-ITX <br>
-      <strong>Material:</strong> Acero con panel lateral de vidrio templado <br>
-      <strong>Ventilación:</strong> 2 ventiladores incluidos (frontal y trasero) <br>
-      <strong>Refrigeración líquida:</strong> Compatible con radiadores de hasta 280 mm <br>
-      <strong>Puertos frontales:</strong> 1x USB 3.1 Type-C, 1x USB 3.0, 1x jack de audio
-    </p>
-    <button onclick="añadirAlCarrito(this,'NZXT H510', '800')">Añadir al carrito</button>
-    <p class="precio-producto"><strong>Precio:</strong> Bs 800</p>
+
+    <!-- 2. AMD Ryzen 5 5600X -->
+    <div class="producto">
+      <img src="Imagenes/Componentes/Ryzen-5600X.png" alt="Ryzen 5 5600X" class="imagen-producto">
+      <div class="titulo-producto">
+        <h3><strong>Ryzen 5 5600X</strong></h3>
+      </div>
+      <p class="descripcion-producto">
+        <strong>Tipo:</strong> CPU de escritorio <br>
+        <strong>Socket:</strong> AM4 <br>
+        <strong>Núcleos/Hilos:</strong> 6/12 <br>
+        <strong>Frecuencia:</strong> 3.7 - 4.6 GHz <br>
+        <strong>Gráficos:</strong> No integrados <br>
+        <strong>Uso ideal:</strong> Gaming de alto rendimiento
+      </p>
+      <button onclick="añadirAlCarrito(this,'Ryzen 5 5600X', '3230')">Añadir al carrito</button>
+<p class="precio-producto">Precio: Bs. 3,230</p>
+    </div>
+
+    <!-- 3. RAM Corsair Vengeance LPX 16GB -->
+    <div class="producto">
+      <img src="Imagenes/Componentes/RAM-Corsair-Vengeance.png" alt="RAM Corsair Vengeance" class="imagen-producto">
+      <div class="titulo-producto">
+        <h3><strong>RAM Corsair Vengeance 16GB</strong></h3>
+      </div>
+      <p class="descripcion-producto">
+        <strong>Tipo:</strong> DDR4 <br>
+        <strong>Frecuencia:</strong> 3200MHz <br>
+        <strong>Latencia:</strong> CL16 <br>
+        <strong>Voltaje:</strong> 1.35V <br>
+        <strong>Uso ideal:</strong> Gaming y multitarea
+      </p>
+      <button onclick="añadirAlCarrito(this,'RAM Corsair Vengeance 16GB', '935')">Añadir al carrito</button>
+<p class="precio-producto">Precio: Bs. 935</p>
+    </div>
+
+    <!-- 4. GPU NVIDIA GeForce RTX 3060 -->
+    <div class="producto">
+      <img src="Imagenes/Componentes/RTX3060.png" alt="NVIDIA RTX 3060" class="imagen-producto">
+      <div class="titulo-producto">
+        <h3><strong>NVIDIA RTX 3060</strong></h3>
+      </div>
+      <p class="descripcion-producto">
+        <strong>Tipo:</strong> GPU dedicada <br>
+        <strong>Memoria:</strong> 12GB GDDR6 <br>
+        <strong>Interfaz:</strong> PCIe 4.0 <br>
+        <strong>Ray Tracing:</strong> Sí <br>
+        <strong>Uso ideal:</strong> Juegos AAA en alta calidad
+      </p>
+      <button onclick="añadirAlCarrito(this,'NVIDIA RTX 3060', '5440')">Añadir al carrito</button>
+<p class="precio-producto">Precio: Bs. 5,440</p>
+    </div>
+
+    <!-- 5. GPU AMD Radeon RX 6700 XT -->
+    <div class="producto">
+      <img src="Imagenes/Componentes/RX-6700XT.png" alt="Radeon RX 6700 XT" class="imagen-producto">
+      <div class="titulo-producto">
+        <h3><strong>Radeon RX 6700 XT</strong></h3>
+      </div>
+      <p class="descripcion-producto">
+        <strong>Tipo:</strong> GPU dedicada <br>
+        <strong>Memoria:</strong> 12GB GDDR6 <br>
+        <strong>Ray Tracing:</strong> Sí <br>
+        <strong>Interfaz:</strong> PCIe 4.0 <br>
+        <strong>Uso ideal:</strong> Juegos 1440p, multitarea intensiva
+      </p>
+      <button onclick="añadirAlCarrito(this,'Radeon RX 6700 XT', '6120')">Añadir al carrito</button>
+<p class="precio-producto">Precio: Bs. 6,120</p>
+    </div>
+
+    <!-- 6. Tarjeta Gráfica NVIDIA GTX 1660 SUPER -->
+    <div class="producto">
+      <img src="Imagenes/Componentes/NVIDIA_GTX1660Super.png" alt="NVIDIA GTX 1660 SUPER" class="imagen-producto">
+      <div class="titulo-producto">
+        <h3><strong>Tarjeta Gráfica NVIDIA GTX 1660 SUPER</strong></h3>
+      </div>
+      <p class="descripcion-producto">
+        <strong>Memoria:</strong> 6GB GDDR6 <br>
+        <strong>Velocidad de memoria:</strong> 14 Gbps <br>
+        <strong>Interfaz:</strong> 192-bit <br>
+        <strong>Conectividad:</strong> HDMI, DisplayPort, DVI-D <br>
+        <strong>Uso ideal:</strong> Gaming 1080p
+      </p>
+      <button onclick="añadirAlCarrito(this,'Tarjeta Gráfica NVIDIA GTX 1660 SUPER', '2720')">Añadir al carrito</button>
+<p class="precio-producto">Precio: Bs. 2,720</p>
+    </div>
+
+    <!-- 7. Power Bank 20000mAh -->
+    <div class="producto">
+      <img src="Imagenes/Componentes/PowerBank_20000mAh.png" alt="Power Bank 20000mAh" class="imagen-producto">
+      <div class="titulo-producto">
+        <h3><strong>Power Bank 20000mAh</strong></h3>
+      </div>
+      <p class="descripcion-producto">
+        <strong>Capacidad:</strong> 20000mAh <br>
+        <strong>Puertos:</strong> 2 USB-A, 1 USB-C <br>
+        <strong>Tiempo de carga:</strong> 6-8 horas <br>
+        <strong>Extras:</strong> Linterna LED, indicador de carga digital
+      </p>
+      <button onclick="añadirAlCarrito(this,'Power Bank 20000mAh', '340')">Añadir al carrito</button>
+<p class="precio-producto">Precio: Bs. 340</p>
+
+    </div>
+
+    <!-- 8. Memoria RAM Kingston Fury 16GB -->
+    <div class="producto">
+      <img src="Imagenes/Componentes/RAM_Kingston_16GB.png" alt="Memoria RAM Kingston Fury 16GB" class="imagen-producto">
+      <div class="titulo-producto">
+        <h3><strong>Memoria RAM Kingston Fury 16GB</strong></h3>
+      </div>
+      <p class="descripcion-producto">
+        <strong>Tipo:</strong> DDR4 <br>
+        <strong>Velocidad:</strong> 3200 MHz <br>
+        <strong>Formato:</strong> DIMM <br>
+        <strong>Compatibilidad:</strong> Intel y AMD <br>
+        <strong>Uso ideal:</strong> Gaming y multitarea
+      </p>
+      <button onclick="añadirAlCarrito(this,'Memoria RAM Kingston Fury 16GB', '1275')">Añadir al carrito</button>
+<p class="precio-producto">Precio: Bs. 1,275</p>
+    </div>
+
+    <!-- 9. Disco SSD Samsung 1TB NVMe -->
+    <div class="producto">
+      <img src="Imagenes/Componentes/SSD_Samsung_1TB.png" alt="Disco SSD Samsung 1TB" class="imagen-producto">
+      <div class="titulo-producto">
+        <h3><strong>Disco SSD Samsung 1TB NVMe</strong></h3>
+      </div>
+      <p class="descripcion-producto">
+        <strong>Tipo:</strong> NVMe M.2 <br>
+        <strong>Velocidad lectura/escritura:</strong> 3500/3000 MB/s <br>
+        <strong>Capacidad:</strong> 1TB <br>
+        <strong>Compatibilidad:</strong> PCIe Gen 3.0
+      </p>
+      <button onclick="añadirAlCarrito(this,'Disco SSD Samsung 1TB NVMe', '1020')">Añadir al carrito</button>
+<p class="precio-producto">Precio: Bs. 1,020</p>
+    </div>
+
+    <!-- 10. Disco Duro Externo Seagate 2TB -->
+    <div class="producto">
+      <img src="Imagenes/Componentes/DiscoDuro_Seagate_2TB.png" alt="Disco Duro Externo Seagate 2TB" class="imagen-producto">
+      <div class="titulo-producto">
+        <h3><strong>Disco Duro Externo Seagate 2TB</strong></h3>
+      </div>
+      <p class="descripcion-producto">
+        <strong>Tipo:</strong> HDD portátil <br>
+        <strong>Capacidad:</strong> 2TB <br>
+        <strong>Conectividad:</strong> USB 3.0 <br>
+        <strong>Velocidad:</strong> 120 MB/s <br>
+        <strong>Uso ideal:</strong> Almacenamiento y respaldo de datos
+      </p>
+      <button onclick="añadirAlCarrito(this,'Disco Duro Externo Seagate 2TB', '5865')">Añadir al carrito</button>
+<p class="precio-producto">Precio: Bs. 5,865</p>
+    </div>
   </div>
 
-  <div class="producto">
-    <img src="Imagenes/Gabinetes/Cooler Master MasterBox TD500 Mesh V2.png" alt="Cooler Master MasterBox TD500 Mesh V2" class="imagen-producto" width="210" height="170">
-    <div class="titulo-producto">
-      <h3><strong>Cooler Master MasterBox TD500 Mesh V2</strong></h3>
-    </div>
-    <p class="descripcion-producto">
-      <strong>Compatibilidad:</strong> ATX, Micro-ATX, Mini-ITX <br>
-      <strong>Material:</strong> Acero con panel lateral de vidrio templado <br>
-      <strong>Ventilación:</strong> 3 ventiladores ARGB de 120 mm incluidos (frontales) <br>
-      <strong>Puertos frontales:</strong> 2x USB 3.2 Gen1, 1x USB 3.2 Gen2 Type-C, 1x jack de audio
-    </p>
-    <button onclick="añadirAlCarrito(this,'Cooler Master MasterBox TD500 Mesh V2', '1000')">Añadir al carrito</button>
-    <p class="precio-producto"><strong>Precio:</strong> Bs 1000</p>
-  </div>
-
-  </div>    
-
+  <!-- Botones flotantes -->
   <div style="text-align: center;">
       <a href="../Carrito/Carrito.html" class="boton-nav-carrito">🛒 Ver carrito</a>
     <a href="../index.html" class="boton-nav">⬅</a>
   </div>
-<hr class="separador-colorido">
-  </main>
-    <!-- Botón Para Subir -->
-  <script src="../Js/BotónParaSubir.js" defer></script>
-  </main>
+
+</main>
 <!-- Barra De Búsqueda -->
  <script src="Js/Buscador.js" defer></script>
+    <!-- Botón Para Subir -->
+  <script src="../Js/BotónParaSubir.js" defer></script>
+  <hr class="separador-colorido">
+  </main>
   <button id="btn-top">↑</button>
 </body>
 </html>
