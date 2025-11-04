@@ -12,15 +12,15 @@
   --sombra-suave: 0 4px 8px rgba(0, 0, 0, 0.4);
 
   --fuente-general: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --fuente-titulos: crackvetica, sans-serif;
+  --fuente-titulos: Eternal, sans-serif; 
 }
 
 /* =======================
    🖋️ Tipografía Personalizada
    ======================= */
 @font-face {
-  font-family: crackvetica;
-  src: url(/CSS/Tipografía/crackvetica/Crackvetica.ttf) format('truetype');
+  font-family: Eternal;
+  src: url(/CSS/Tipografía/eternal/Eternal.ttf) format(truetype);
 }
 
 /* =======================
@@ -55,7 +55,7 @@ body {
    ======================= */
 h1 {
   font-family: var(--fuente-titulos);
-  font-size: 4rem;
+  font-size: 7rem;
   color: var(--color-principal);
   text-align: center;
   margin: 40px 0 20px;
