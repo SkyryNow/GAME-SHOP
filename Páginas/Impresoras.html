@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>IMPRESORAS</title>
+  <link rel="icon" href="../Imagenes/GameShop_Logo.png">
+  <link rel="stylesheet" href="../Páginas/CSS/style.css">
+  <script src="../Carrito/Js/Carrito.js" defer></script>
+</head>
+<body>
+
+  <!-- 🔔 Notificación -->
+  <div id="notificacion" style="position: fixed; top: 20px; left: 100px; background: #333; color: white; padding: 10px; border-radius: 8px; display: none; z-index: 999;"></div>
+
+  <!-- ⬅️ Botones de Navegación -->
+  <a href="../index.html" class="boton-nav">⬅</a>
+  <a href="../Carrito/Carrito.html" class="boton-nav-carrito">🛒 Ver carrito</a>
+
+  <h1>IMPRESORAS</h1>
+
+  <!-- 🔍 Barra de Búsqueda -->
+  <div class="contenedor-busqueda">
+    <input type="text" id="busqueda" placeholder="🔍 Buscar impresoras..." onkeyup="filtrarProductos()">
+  </div>
+
+  <main>
+    <hr class="separador-colorido">
+
+    <!-- 🖨️ Catálogo de Impresoras -->
+    <section class="seccion-productos">
+
+      <!-- Producto 1 -->
+      <div class="producto">
+        <img src="Imagenes/Impresoras/L32100.jpg" alt="Epson L3210" class="imagen-producto">
+        <div class="titulo-producto"><h3><strong>Epson L3210</strong></h3></div>
+        <p class="descripcion-producto">
+          Modelo económico, ideal para hogar u oficina pequeña.
+        </p>
+        <button onclick="añadirAlCarrito(this, 'Epson L3210', '1700')">Añadir al carrito</button>
+        <p class="precio-producto"><strong>Precio:</strong> Bs 1700</p>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="producto">
+        <img src="Imagenes/Impresoras/L5590.jpg" alt="L5590" class="imagen-producto">
+        <div class="titulo-producto"><h3><strong>L5590</strong></h3></div>
+        <p class="descripcion-producto">
+          Paquete con impresora + accesorios (wifi opcional).
+        </p>
+        <button onclick="añadirAlCarrito(this, 'L5590', '2800')">Añadir al carrito</button>
+        <p class="precio-producto"><strong>Precio:</strong> Bs 2800</p>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="producto">
+        <img src="Imagenes/Impresoras/L5190.jpg" alt="L5190" class="imagen-producto">
+        <div class="titulo-producto"><h3><strong>L5190</strong></h3></div>
+        <p class="descripcion-producto">
+          Versión económica del paquete, con wifi disponible.
+        </p>
+        <button onclick="añadirAlCarrito(this, 'L5190', '2400')">Añadir al carrito</button>
+        <p class="precio-producto"><strong>Precio:</strong> Bs 2400</p>
+      </div>
+
+      <!-- Producto 4 -->
+      <div class="producto">
+        <img src="Imagenes/Impresoras/L1250.jpg" alt="L1250" class="imagen-producto">
+        <div class="titulo-producto"><h3><strong>L1250</strong></h3></div>
+        <p class="descripcion-producto">
+          Unidad revisada — funcionamiento garantizado.
+        </p>
+        <button onclick="añadirAlCarrito(this, 'L1250', '1900')">Añadir al carrito</button>
+        <p class="precio-producto"><strong>Precio:</strong> Bs 1900</p>
+      </div>
+
+      <!-- Producto 5 -->
+      <div class="producto">
+        <img src="Imagenes/Impresoras/L810.jpg" alt="L810" class="imagen-producto">
+        <div class="titulo-producto"><h3><strong>L810</strong></h3></div>
+        <p class="descripcion-producto">
+          Ideal para uso ocasional o repuestos.
+        </p>
+        <button onclick="añadirAlCarrito(this, 'L810', '1250')">Añadir al carrito</button>
+        <p class="precio-producto"><strong>Precio:</strong> Bs 1250</p>
+      </div>
+
+    </section>
+
+    <hr class="separador-colorido">
+
+
+  </main>
+
+  <!-- Botón Para Subir -->
+  <script src="../Js/BotónParaSubir.js" defer></script>
+  </main>
+<!-- Barra De Búsqueda -->
+ <script src="Js/Buscador.js" defer></script>
+  <button id="btn-top">↑</button>
+</body>
+</html>
