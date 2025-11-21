@@ -8,151 +8,207 @@
     --color-subtitulo: rgb(5, 5, 5);
     --font-sin-serif: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --fondo-body: rgb(12, 12, 12);
+    --fondo-contenedor: #1a1a1a;
+    --fondo-item: #333333;
+    --border-radius: 10px;
 }
 
-h1 {
-    font-size: 5rem;
-    font-family: crackvetica;
-    color: var(--color-titulo1);
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 3rem;
-    color: var(--color-titulo2);
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-h3 {
-    font-size: 1.2rem;
-    color: var(--color-titulo3);
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-img {
-    text-align: center;
-    margin: 0;
-}
-
-p {
-    font-size: 1rem;
-    color: var(--color-parrafo);
-    text-align: justify;
-    margin-bottom: 15px;
-}
-/* Formulario */
-form label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-  color: var(--color-texto);
-}
-
-form input {
-  width: 100%;
-  padding: 10px 14px;
-  margin-bottom: 15px;
-  border-radius: 6px;
-  border: 1.5px solid #444;
-  background-color: #222;
-  color: #eee;
-  font-size: 16px;
-  transition: border-color 0.3s;
-}
-
-form input:focus {
-  border-color: var(--color-titulo1);
-  outline: none;
-}
-
-form button {
-  margin-top: 10px;
-  background-color: var(--color-titulo1);
-  color: var(--color-titulo3);
-  font-weight: 700;
-  padding: 14px 0;
-  width: 100%;
-  border-radius: 10px;
-  font-size: 18px;
-  box-shadow: 0 0 10px var(--color-titulo1);
-}
-
-form button:hover {
-  background-color: var(--color-titulo2);
-  box-shadow: 0 0 15px var(--color-titulo2);
-}
+/* =======================
+   🔧 RESET GENERAL
+   ======================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* =======================
+   📝 TIPOGRAFÍA
+   ======================= */
+h1 {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-family: crackvetica;
+    color: var(--color-titulo1);
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+
+h2 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    color: var(--color-titulo2);
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+
+h3 {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--color-titulo3);
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+
+p {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    color: var(--color-parrafo);
+    text-align: justify;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* =======================
+   🎨 BODY Y CONTENEDOR
+   ======================= */
 body {
   background-image: url(../Fondo.png);
   background-color: var(--fondo-body);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
   font-family: var(--font-sin-serif);
   color: var(--color-texto);
   padding: 20px;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
 }
 
 .contenedor-carrito {
-  background-color: #1a1a1a;
+  background-color: var(--fondo-contenedor);
   border-radius: 12px;
   padding: 25px;
   max-width: 700px;
   width: 100%;
   box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
-/* 🔘 BOTONES GENERALES */
-button, .btn {
+
+/* =======================
+   📝 FORMULARIO
+   ======================= */
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--color-texto);
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1.5px solid #444;
+  background-color: #222;
+  color: #eee;
+  font-size: clamp(14px, 2vw, 16px);
+  transition: border-color 0.3s ease;
+  font-family: var(--font-sin-serif);
+}
+
+form input:focus,
+form select:focus {
+  border-color: var(--color-titulo1);
+  outline: none;
+  box-shadow: 0 0 8px var(--color-titulo1);
+}
+
+/* Select de método de pago */
+#metodo-pago {
+  padding: 12px 16px;
+  font-size: clamp(14px, 2vw, 16px);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px 16px;
+  cursor: pointer;
+}
+
+/* Campos condicionales de pago */
+#datos-tarjeta input,
+#datos-paypal input,
+#datos-transferencia input,
+#datos-qr input {
+  margin-bottom: 10px;
+}
+
+#datos-qr img {
+  margin: 15px auto;
+  max-width: 100%;
+  height: auto;
+}
+
+#codigo-pedido {
+  font-weight: bold;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  text-align: center;
+  background-color: #333;
+  padding: 10px;
+  border: 2px solid var(--color-titulo1);
+}
+
+/* =======================
+   🔘 BOTONES GENERALES
+   ======================= */
+button, 
+.btn {
   padding: 12px 22px;
   background-color: var(--color-titulo1);
   color: var(--color-texto);
   border: none;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   font-family: var(--font-sin-serif);
-  box-shadow: 2px 2px 6px rgba(0,0,0,0.4), inset 0 0 5px rgba(255,255,255,0.05);
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
   transition: all 0.3s ease;
-  transform: scale(1);
-  letter-spacing: 0.5px;
-}
-
-button:hover, .btn:hover {
-  background-color: var(--color-titulo2);
-  box-shadow: 0 0 12px var(--color-titulo2), 0 0 6px rgba(255, 255, 255, 0.2);
-  transform: scale(1.05);
   cursor: pointer;
-}
-/* 🎯 BOTONES ESPECÍFICOS DEL CARRITO Y MODAL */
-form button,
-.modal-botones button,
-.carrito-control button {
-  background-color: var(--color-titulo1);
-  color: var(--color-titulo3);
-  box-shadow: 0 0 10px var(--color-titulo1);
-  border-radius: 10px;
-  font-size: 1rem;
-  padding: 12px 20px;
-  font-weight: 700;
-  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  min-height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-form button:hover,
-.modal-botones button:hover,
-.carrito-control button:hover {
+button:hover, 
+.btn:hover {
   background-color: var(--color-titulo2);
-  box-shadow: 0 0 12px var(--color-titulo2), inset 0 0 6px rgba(255,255,255,0.1);
-  transform: scale(1.06);
+  box-shadow: 0 0 12px var(--color-titulo2);
+  transform: scale(1.05);
 }
 
-/* 🔄 BOTÓN "Volver al inicio" o enlaces similares */
+button:active,
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Botón del formulario */
+form button {
+  width: 100%;
+  margin-top: 10px;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  padding: 14px 0;
+}
+
+/* Botón "Volver al inicio" */
 a.btn {
   display: inline-block;
   text-align: center;
@@ -161,171 +217,130 @@ a.btn {
   text-decoration: none;
   font-weight: bold;
   padding: 12px 24px;
-  border-radius: 10px;
   margin-top: 20px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 100%;
+  max-width: 300px;
 }
 
 a.btn:hover {
   background-color: #0056b3;
-  transform: scale(1.05);
 }
 
-
-/* Método de Pago */
-#metodo-pago {
-  width: 100%;
-  max-width: 300px;
-  padding: 12px 16px;
-  font-size: 16px;
-  font-family: var(--font-sin-serif);
-  color: var(--color-texto);
-  background-color: #1a1a1a;          /* oscuro para que combine con fondo */
-  border: 2px solid var(--color-titulo1);
-  border-radius: 8px;
-  appearance: none;                   /* quita flecha default para estilos personalizados */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"); /* flecha blanca */
-  background-repeat: no-repeat;
-  background-position: right 12px center;
-  background-size: 16px 16px;
-  cursor: pointer;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-#metodo-pago:focus {
-  border-color: var(--color-titulo2);
-  box-shadow: 0 0 8px var(--color-titulo2);
-  outline: none;
-}
-
-/* Sombras */
-h1, h2, h3 {
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
-}
-
-button, .btn {
-  height: 50px;
-  width: 220px !important;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-}
-/* Animación de Botones */
-button, .btn {
-  transition: all 0.3s ease;
-  transform: scale(1);
-}
-button:hover, .btn:hover {
-  transform: scale(1.05);
-}
-/* Base para Móviles */
-@media (max-width: 768px) {
-  h1 { font-size: 3rem; }
-  h2 { font-size: 2rem; }
-  h3 { font-size: 1.2rem; }
-  p  { font-size: 0.9rem; }
-  section { padding: 15px; }
-  .card, .btn {
-    width: 100%;
-    box-sizing: border-box;
-  }
-}
-
-#lista-carrito li.eliminado {
-    opacity: 0;
-    transform: translateX(-50%);
-}
-/* Visual Productos */
+/* =======================
+   🛒 LISTA DEL CARRITO
+   ======================= */
 #lista-carrito {
   list-style: none;
   padding: 0;
   margin-bottom: 20px;
 }
-.carrito-control {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.carrito-control .total {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #eee;
-}
 
 #lista-carrito li {
-  background-color: #333333;
+  background-color: var(--fondo-item);
   padding: 12px 16px;
   margin-bottom: 12px;
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 18px;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
   color: #eee;
   box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
   transition: all 0.3s ease;
+  flex-wrap: wrap;
+  gap: 10px;
 }
-/* Scroll */
-html {
-  scroll-behavior: smooth;
+
+#lista-carrito li.eliminado {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.4s ease;
 }
-/* Estilo de Modal */
+
+/* Control del carrito (total y botón vaciar) */
+.carrito-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.carrito-control .total {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: bold;
+  color: #eee;
+}
+
+.carrito-control button {
+  width: auto;
+  min-width: 150px;
+}
+
+/* =======================
+   🎯 MODAL
+   ======================= */
 .modal {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0,0,0,0.6);
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0;
+  background-color: rgba(0,0,0,0.75);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  animation: fadeIn 0.3s ease;
+  padding: 20px;
 }
 
 .modal-contenido {
   background-color: #222;
-  padding: 20px 30px;
-  border-radius: 10px;
+  padding: 25px 30px;
+  border-radius: var(--border-radius);
   text-align: center;
   color: var(--color-texto);
-  box-shadow: 0 0 15px var(--color-titulo1);
-  max-width: 320px;
+  box-shadow: 0 0 20px var(--color-titulo1);
+  max-width: 90%;
+  width: 100%;
+  max-width: 400px;
+  animation: slideIn 0.3s ease;
+}
+
+.modal-contenido p {
+  margin-bottom: 20px;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+}
+
+.modal-botones {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .modal-botones button {
-  margin: 10px 15px 0 15px;
-  padding: 10px 20px;
-  border: none;
+  margin: 0;
+  padding: 12px 25px;
+  min-width: 100px;
   border-radius: 8px;
   font-weight: 700;
-  font-size: 1rem;
-  cursor: pointer;
-  color: white;
-  background-color: var(--color-titulo1);
-  box-shadow: 0 0 10px var(--color-titulo1);
-  transition: background-color 0.3s ease;
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
-.modal-botones button:hover {
-  background-color: var(--color-titulo2);
-}
-.modal {
-  animation: fadeIn 0.3s ease;
-}
-
+/* Animaciones del modal */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-.modal-contenido {
-  animation: slideIn 0.3s ease;
-}
-
 @keyframes slideIn {
-  from { transform: translateY(-20px); opacity: 0; }
+  from { transform: translateY(-30px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+
 .modal.oculto {
   animation: fadeOut 0.3s ease forwards;
 }
@@ -341,81 +356,292 @@ html {
 
 @keyframes slideOut {
   from { transform: translateY(0); opacity: 1; }
-  to { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(-30px); opacity: 0; }
 }
 
-/* Vista para Dispositivos Móviles */
+/* =======================
+   🔔 NOTIFICACIÓN
+   ======================= */
+#notificacion {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--color-titulo1);
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(188, 15, 23, 0.8);
+  z-index: 10000;
+  animation: slideInRight 0.4s ease;
+  max-width: 90%;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
 
-@media (max-width: 768px) {
-  h1 { font-size: 3rem; }
-  h2 { font-size: 2rem; }
-  h3 { font-size: 1.4rem; }
-  p  { font-size: 1rem; }
-
-  .catalogo-card {
-    width: 90%;
-    height: auto;
-    padding: 15px;
-    margin: 10px auto;
-    text-align: center;
+@keyframes slideInRight {
+  from { 
+    transform: translateX(400px); 
+    opacity: 0; 
   }
-
-  .boton-nav {
-    width: 90%;
-    font-size: 1rem;
-    padding: 10px;
-  }
-
-  .slider-marcas img {
-    width: 80px;
-  }
-
-  button, .btn {
-    width: 100%;
-    font-size: 1rem;
-    padding: 10px;
-  }
-
-  section {
-    padding: 10px;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  #btn-top {
-    bottom: 15px;
-    right: 15px;
-    padding: 8px 12px;
-  }
-
-  .typewriter {
-    font-size: 1rem;
-    padding: 0 5px;
+  to { 
+    transform: translateX(0); 
+    opacity: 1; 
   }
 }
 
-@media (max-width: 768px) {
+/* =======================
+   📱 RESPONSIVE - TABLETS (max-width: 992px)
+   ======================= */
+@media (max-width: 992px) {
   body {
-    display: block;
-    padding: 0;
-    margin: 0;
+    padding: 15px;
   }
 
   .contenedor-carrito {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
     padding: 20px;
-    border-radius: 0;
-    box-shadow: none;
   }
 
-  header, footer, main > *:not(.contenedor-carrito) {
-    display: none; /* Oculta todo lo que no sea el carrito */
+  .carrito-control {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .carrito-control button {
+    width: 100%;
+  }
+
+  a.btn {
+    max-width: 100%;
   }
 }
 
+/* =======================
+   📱 RESPONSIVE - MÓVILES (max-width: 768px)
+   ======================= */
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+    display: block;
+  }
+
+  .contenedor-carrito {
+    max-width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+    padding: 25px 20px;
+    box-shadow: none;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  /* Lista del carrito en móvil - AGRANDADA */
+  #lista-carrito li {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px 16px;
+    font-size: 1.15rem;
+    line-height: 1.5;
+  }
+
+  /* Formulario en móvil - AGRANDADO */
+  form label {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  form input,
+  form select {
+    padding: 16px 14px;
+    font-size: 17px; /* Evita zoom en iOS y más legible */
+    margin-bottom: 18px;
+  }
+
+  form button {
+    padding: 18px 0;
+    font-size: 1.2rem;
+    min-height: 55px;
+  }
+
+  /* Control del carrito - AGRANDADO */
+  .carrito-control .total {
+    font-size: 1.4rem;
+  }
+
+  .carrito-control button {
+    font-size: 1.1rem;
+    padding: 16px 20px;
+    min-height: 55px;
+  }
+
+  /* Modal en móvil - AGRANDADO */
+  .modal {
+    padding: 15px;
+  }
+
+  .modal-contenido {
+    padding: 25px;
+    max-width: 95%;
+  }
+
+  .modal-contenido p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+  }
+
+  .modal-botones {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .modal-botones button {
+    width: 100%;
+    min-width: auto;
+    font-size: 1.1rem;
+    padding: 16px;
+    min-height: 55px;
+  }
+
+  /* Notificación en móvil - AGRANDADA */
+  #notificacion {
+    top: 15px;
+    right: 15px;
+    left: 15px;
+    max-width: calc(100% - 30px);
+    font-size: 1.05rem;
+    padding: 15px 18px;
+  }
+
+  /* QR en móvil - AGRANDADO */
+  #datos-qr img {
+    max-width: 250px;
+  }
+
+  #datos-qr p {
+    font-size: 1.1rem;
+  }
+
+  #codigo-pedido {
+    font-size: 1.3rem;
+    padding: 14px;
+  }
+
+  /* Botón volver - AGRANDADO */
+  a.btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 18px 20px;
+    font-size: 1.15rem;
+    min-height: 55px;
+  }
+}
+
+/* =======================
+   📱 RESPONSIVE - MÓVILES PEQUEÑOS (max-width: 480px)
+   ======================= */
+@media (max-width: 480px) {
+  .contenedor-carrito {
+    padding: 15px 10px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  #lista-carrito li {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  form input,
+  form select {
+    padding: 12px 10px;
+  }
+
+  button,
+  .btn {
+    font-size: 0.95rem;
+    padding: 12px 15px;
+  }
+
+  .carrito-control .total {
+    font-size: 1rem;
+  }
+
+  #datos-qr img {
+    max-width: 180px;
+  }
+
+  .modal-contenido {
+    padding: 18px;
+  }
+}
+
+/* =======================
+   🎨 MEJORAS DE UX
+   ======================= */
+
+/* Focus visible para accesibilidad */
+*:focus-visible {
+  outline: 2px solid var(--color-titulo1);
+  outline-offset: 2px;
+}
+
+/* Smooth scroll para iOS */
+@supports (-webkit-overflow-scrolling: touch) {
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Prevenir selección accidental en móvil */
+button,
+.btn {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Mejorar rendimiento de animaciones */
+.modal,
+.modal-contenido,
+#lista-carrito li {
+  will-change: transform, opacity;
+}
+
+/* =======================
+   🎭 MODO OSCURO NATIVO
+   ======================= */
+@media (prefers-color-scheme: dark) {
+  /* Ya está optimizado para modo oscuro por defecto */
+}
+
+/* =======================
+   ♿ REDUCCIÓN DE MOVIMIENTO
+   ======================= */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
