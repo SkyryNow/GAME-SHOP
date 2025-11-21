@@ -3,23 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GameShop - Tecnología en tus manos</title>
-
-  <!-- SEO -->
-  <meta name="description" content="GameShop - Tienda nacional de tecnología, laptops, componentes, videojuegos y más.">
-  <meta name="keywords" content="tecnología, laptops, videojuegos, Santa Cruz, tienda, GameShop">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- SEO Mejorado -->
+  <title>GameShop Bolivia | Tecnología Gaming y Componentes PC en Santa Cruz</title>
+  <meta name="description" content="GameShop Bolivia - Tienda líder en tecnología gaming: laptops, componentes PC, monitores, accesorios y videojuegos en Santa Cruz. Envíos a todo el país. ¡Visítanos!">
+  <meta name="keywords" content="tecnología gaming, laptops gamer, componentes PC, tarjetas gráficas, procesadores, monitores gaming, periféricos, videojuegos, Santa Cruz, Bolivia, GameShop">
   <meta name="author" content="GameShop Bolivia">
-  <link rel="icon" href="Imagenes/GameShop_Logo.png">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="GameShop Bolivia - Tecnología Gaming">
+  <meta property="og:description" content="La mejor tienda de tecnología gaming en Santa Cruz. Laptops, componentes, monitores y más.">
+  <meta property="og:image" content="Imagenes/GameShop_Logo.png">
+  <meta property="og:url" content="https://www.gameshop.bo">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GameShop Bolivia - Tecnología Gaming">
+  <meta name="twitter:description" content="La mejor tienda de tecnología gaming en Santa Cruz.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Imagenes/GameShop_Logo.png">
+  <link rel="apple-touch-icon" href="Imagenes/GameShop_Logo.png">
+  
+  <!-- Preload recursos críticos -->
+  <link rel="preload" href="CSS/style.css" as="style">
+  <link rel="preload" href="Imagenes/GameShop_Logo.png" as="image">
   
   <!-- Bootstrap -->
   <link href="Carrusel/CSS/bootstrap.min.css" rel="stylesheet">
 
   <!-- Slick Carousel -->
-  <link rel="stylesheet" href="Carrusel/CSS/Carrousel.css"/>
-  <link rel="stylesheet" href="Carrusel/CSS/CorrouselTheme.css"/>
+  <link rel="stylesheet" href="Carrusel/CSS/Carrousel.css">
+  <link rel="stylesheet" href="Carrusel/CSS/CorrouselTheme.css">
 
   <!-- Estilos personalizados -->
   <link rel="stylesheet" href="CSS/style.css">
+  
+  <!-- Schema.org para SEO Local -->
+   <script src="Js/application.js" defer></script>
 
   <meta name="google-site-verification" content="KLLzNXFPYVc_zvuiUtgDWnbJBQLKpBJj1lHwt86NaCU" />
   
@@ -28,177 +52,289 @@
 <body>
 
   <!-- Header -->
-  <header class="text-center">
+  <header class="text-center" role="banner">
     <h1 class="typewriter">Bienvenido a GameShop</h1>
-    <hr style="border: none; height: 10px; background: linear-gradient(to right, #f00, #0f0, #00f); border-radius: 2px;">
+    <hr aria-hidden="true" style="border: none; height: 10px; background: linear-gradient(to right, #f00, #0f0, #00f); border-radius: 2px;">
   </header>
 
-  <main>
+  <!-- Main Content -->
+  <main id="main-content" role="main">
 
     <!-- Carrusel de Marcas -->
-    <section class="partners-logos">
-      <h2 class="text-center">NUESTRAS MARCAS</h2>
-      <div class="slider-marcas">
-        <div><img src="Imagenes/MarcasLogos/microsoft.png" alt="Logo de Microsoft"></div>
-        <div><img src="Imagenes/MarcasLogos/amd.png" alt="Logo de AMD"></div>
-        <div><img src="Imagenes/MarcasLogos/red_dragon.png" alt="Logo de Red Dragon"></div>
-        <div><img src="Imagenes/MarcasLogos/republic.png" alt="Logo de Republic of Gamers"></div>
-        <div><img src="Imagenes/MarcasLogos/nvidia.png" alt="Logo de NVIDIA"></div>
-        <div><img src="Imagenes/MarcasLogos/asrock.png" alt="Logo de ASRock"></div>
-        <div><img src="Imagenes/MarcasLogos/asus.png" alt="Logo de ASUS"></div>
-        <div><img src="Imagenes/MarcasLogos/msi.png" alt="Logo de MSI"></div>
-        <div><img src="Imagenes/MarcasLogos/seagate.png" alt="Logo de Seagate"></div>
-        <div><img src="Imagenes/MarcasLogos/intel.png" alt="Logo de Intel"></div>
-        <div><img src="Imagenes/MarcasLogos/lenovo.png" alt="Logo de Lenovo"></div>
-        <div><img src="Imagenes/MarcasLogos/dell.png" alt="Logo de Dell"></div>
-        <div><img src="Imagenes/MarcasLogos/hp.png" alt="Logo de HP"></div>
+    <section class="partners-logos" aria-labelledby="marcas-titulo">
+      <h2 id="marcas-titulo" class="text-center">NUESTRAS MARCAS</h2>
+      <div class="slider-marcas" role="list" aria-label="Marcas asociadas">
+        <div role="listitem"><img src="Imagenes/MarcasLogos/microsoft.png" alt="Logo de Microsoft" loading="lazy"></div>
+        <div role="listitem"><img src="Imagenes/MarcasLogos/amd.png" alt="Logo de AMD" loading="lazy"></div>
+        <div role="listitem"><img src="Imagenes/MarcasLogos/red_dragon.png" alt="Logo de Red Dragon" loading="lazy"></div>
+        <div role="listitem"><img src="Imagenes/MarcasLogos/republic.png" alt="Logo de Republic of Gamers" loading="lazy"></div>
+        <div role="listitem"><img src="Imagenes/MarcasLogos/nvidia.png" alt="Logo de NVIDIA" loading="lazy"></div>
+        <div role="listitem"><img src="Imagenes/MarcasLogos/asrock.png" alt="Logo de ASRock" loading="lazy"></div>
+        <div role="listitem"><img src="Imagenes/MarcasLogos/asus.png" alt="Logo de ASUS" loading="lazy"></div>
+        <div role="listitem"><img src="Imagenes/MarcasLogos/msi.png" alt="Logo de MSI" loading="lazy"></div>
+        <div role="listitem"><img src="Imagenes/MarcasLogos/seagate.png" alt="Logo de Seagate" loading="lazy"></div>
+        <div role="listitem"><img src="Imagenes/MarcasLogos/intel.png" alt="Logo de Intel" loading="lazy"></div>
+        <div role="listitem"><img src="Imagenes/MarcasLogos/lenovo.png" alt="Logo de Lenovo" loading="lazy"></div>
+        <div role="listitem"><img src="Imagenes/MarcasLogos/dell.png" alt="Logo de Dell" loading="lazy"></div>
+        <div role="listitem"><img src="Imagenes/MarcasLogos/hp.png" alt="Logo de HP" loading="lazy"></div>
       </div>
     </section>
 
     <!-- Logo principal con Lightbox -->
-<div class="text-center my-4">
-  <img id="logoGrande" src="Imagenes/GameShop_Logo.png" alt="Logo de GameShop" width="650" height="650" style="cursor: zoom-in;">
-</div>
+    <div class="text-center my-4">
+      <img 
+        id="logoGrande" 
+        src="Imagenes/GameShop_Logo.png" 
+        alt="Logo principal de GameShop Bolivia" 
+        width="650" 
+        height="650"
+        loading="eager"
+        style="cursor: zoom-in;"
+        role="button"
+        tabindex="0"
+        aria-label="Hacer clic para ampliar logo">
+    </div>
 
-<!-- Contenedor del Lightbox -->
-<div id="lightbox" class="lightbox">
-  <span class="close">&times;</span>
-  <img class="lightbox-content" id="imgAmpliada">
-</div>
-
+    <!-- Contenedor del Lightbox -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada del logo">
+      <span class="close" role="button" tabindex="0" aria-label="Cerrar vista ampliada">&times;</span>
+      <img class="lightbox-content" id="imgAmpliada" alt="Logo de GameShop ampliado">
+    </div>
 
     <!-- Descripción breve -->
-    <h3 class="text-center px-2">
-      En GameShop vivimos la tecnología y el gaming como estilo de vida. <br> Apostamos por lo nuevo, lo potente y lo que viene. <br> Cada producto que ofrecemos <br> es parte de una experiencia diseñada para quienes quieren más.
-    </h3>
-  <h4>Gracias por ser parte del cambio</h4>
-    
-
-    <!-- Catálogo -->
-    <section id="catalogo">
-      <h1 class="text-center mt-5">Catalogo</h1>
-      <div id="contenido-dinamico" style="margin-top: 30px;"></div>
-      <div class="d-flex flex-wrap justify-content-center gap-4 p-3">
-
-        <!-- 📦 Catálogo de Categorías -->
-<div class="catalogo-container">
-
-    <a href="Páginas/Laptop.html" class="catalogo-card">
-      <img src="Imagenes/Laptop_Logo.jpg" alt="Categoría Laptops" class="catalogo-img">
-    <h3>Laptops</h3>
-    </a>
-
-    <a href="Páginas/Componentes.html" class="catalogo-card">
-      <img src="Imagenes/Componentes_Logo.png" alt="Categoría Componentes" class="catalogo-img">
-    <h3>Componentes</h3>
-    </a>
-
-    <a href="Páginas/Monitores.html" class="catalogo-card">
-      <img src="Imagenes/Monitor_Logo.png" alt="Categoría Monitores" class="catalogo-img">
-    <h3>Monitores</h3>
-    </a>
-
-    <a href="Páginas/Accesorios.html" class="catalogo-card">
-      <img src="Imagenes/Accesorios_Logo.png" alt="Categoría Accesorios" class="catalogo-img">
-    <h3>Accesorios</h3>
-    </a>
-
-    <a href="Páginas/Gabinetes.html" class="catalogo-card">
-      <img src="Imagenes/Gabinete_Logo.png" alt="Categoría Gabinetes" class="catalogo-img">
-    <h3>Gabinetes</h3>
-    </a>
-
-    <a href="Páginas/VideoJuegos.html" class="catalogo-card">
-      <img src="Imagenes/Videojuegos_Logo.png" alt="Categoría Videojuegos" class="catalogo-img">
-    <h3>Videojuegos</h3>
-    </a>
-
-    <a href="Páginas/Impresoras.html" class="catalogo-card">
-      <img src="Imagenes/L5590.png" alt="Categoría impresoras" class="catalogo-img">
-    <h3>Impresoras</h3>
-    </a>
-
-</div>
-
-
-</div>
-
+    <section class="intro-text" aria-labelledby="intro-heading">
+      <h3 id="intro-heading" class="text-center px-2">
+        En GameShop vivimos la tecnología y el gaming como estilo de vida. <br> 
+        Apostamos por lo nuevo, lo potente y lo que viene. <br> 
+        Cada producto que ofrecemos <br> 
+        es parte de una experiencia diseñada para quienes quieren más.
+      </h3>
+      <h4 class="text-center">Gracias por ser parte del cambio</h4>
     </section>
+
+    <!-- Catálogo de Categorías -->
+    <section id="catalogo" aria-labelledby="catalogo-titulo">
+      <h2 id="catalogo-titulo" class="text-center mt-5">Catálogo</h2>
+      
+      <!-- Contenido dinámico (si es necesario) -->
+      <div id="contenido-dinamico" style="margin-top: 30px;"></div>
+      
+      <div class="d-flex flex-wrap justify-content-center gap-4 p-3">
+        <nav class="catalogo-container" aria-label="Categorías de productos">
+
+          <!-- Laptops -->
+          <a href="Páginas/Laptop.html" class="catalogo-card" aria-label="Ver categoría de Laptops">
+            <img 
+              src="Imagenes/Laptop_Logo.jpg" 
+              alt="Imagen representativa de laptops gaming" 
+              class="catalogo-img"
+              loading="lazy"
+              width="300"
+              height="260">
+            <h3>Laptops</h3>
+          </a>
+
+          <!-- Componentes -->
+          <a href="Páginas/Componentes.html" class="catalogo-card" aria-label="Ver categoría de Componentes">
+            <img 
+              src="Imagenes/Componentes_Logo.png" 
+              alt="Imagen representativa de componentes de PC" 
+              class="catalogo-img"
+              loading="lazy"
+              width="300"
+              height="260">
+            <h3>Componentes</h3>
+          </a>
+
+          <!-- Monitores -->
+          <a href="Páginas/Monitores.html" class="catalogo-card" aria-label="Ver categoría de Monitores">
+            <img 
+              src="Imagenes/Monitor_Logo.png" 
+              alt="Imagen representativa de monitores gaming" 
+              class="catalogo-img"
+              loading="lazy"
+              width="300"
+              height="260">
+            <h3>Monitores</h3>
+          </a>
+
+          <!-- Accesorios -->
+          <a href="Páginas/Accesorios.html" class="catalogo-card" aria-label="Ver categoría de Accesorios">
+            <img 
+              src="Imagenes/Accesorios_Logo.png" 
+              alt="Imagen representativa de accesorios gaming" 
+              class="catalogo-img"
+              loading="lazy"
+              width="300"
+              height="260">
+            <h3>Accesorios</h3>
+          </a>
+
+          <!-- Gabinetes -->
+          <a href="Páginas/Gabinetes.html" class="catalogo-card" aria-label="Ver categoría de Gabinetes">
+            <img 
+              src="Imagenes/Gabinete_Logo.png" 
+              alt="Imagen representativa de gabinetes para PC" 
+              class="catalogo-img"
+              loading="lazy"
+              width="300"
+              height="260">
+            <h3>Gabinetes</h3>
+          </a>
+
+          <!-- Videojuegos -->
+          <a href="Páginas/VideoJuegos.html" class="catalogo-card" aria-label="Ver categoría de Videojuegos">
+            <img 
+              src="Imagenes/Videojuegos_Logo.png" 
+              alt="Imagen representativa de videojuegos" 
+              class="catalogo-img"
+              loading="lazy"
+              width="300"
+              height="260">
+            <h3>Videojuegos</h3>
+          </a>
+
+          <!-- Impresoras -->
+          <a href="Páginas/Impresoras.html" class="catalogo-card" aria-label="Ver categoría de Impresoras">
+            <img 
+              src="Imagenes/L5590.png" 
+              alt="Imagen representativa de impresoras" 
+              class="catalogo-img"
+              loading="lazy"
+              width="300"
+              height="260">
+            <h3>Impresoras</h3>
+          </a>
+
+        </nav>
+      </div>
+    </section>
+
   </main>
 
-<!-- Footer -->
-<footer>
-  <h2 class="text-center mb-5">Información</h2>
-  <div class="d-flex flex-wrap justify-content-center gap-4">
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <h2 class="text-center mb-5">Información</h2>
+    <div class="d-flex flex-wrap justify-content-center gap-4">
 
-    <!-- Contacto y redes -->
-    <section class="info-box">
-      <h2 class="text-center">📞 Contacto</h2>
-      <div class="text-center my-3">
-        <img src="Imagenes/WhastApp_Logo.png" alt="WhatsApp" width="70" height="50">
-        <a href="https://wa.me/59169231705" target="_blank" class="d-block">+591 69231705</a>
-      </div>
-      <div class="text-center my-3">
-        <img src="Imagenes/CorreoElectronico_Logo.png" alt="Correo Electrónico" width="60" height="60">
-        <a href="mailto:soportegameshopst@gmail.com" target="_blank" class="d-block">soportegameshopst@gmail.com</a>
-      </div>
+      <!-- Contacto y redes -->
+      <section class="info-box" aria-labelledby="contacto-titulo">
+        <h2 id="contacto-titulo" class="text-center">📞 Contacto</h2>
+        
+        <!-- WhatsApp -->
+        <div class="text-center my-3">
+          <img src="Imagenes/WhastApp_Logo.png" alt="" width="70" height="50" aria-hidden="true">
+          <a 
+            href="https://wa.me/59169231705" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="d-block"
+            aria-label="Contactar por WhatsApp al +591 69231705">
+            +591 69231705
+          </a>
+        </div>
+        
+        <!-- Email -->
+        <div class="text-center my-3">
+          <img src="Imagenes/CorreoElectronico_Logo.png" alt="" width="60" height="60" aria-hidden="true">
+          <a 
+            href="mailto:soportegameshopst@gmail.com" 
+            class="d-block"
+            aria-label="Enviar correo a soportegameshopst@gmail.com">
+            soportegameshopst@gmail.com
+          </a>
+        </div>
 
-      <h2 class="text-center">🌐 Redes Sociales</h2>
-      <div class="d-flex justify-content-center gap-5 mb-4">
-        <a href="https://www.instagram.com/contactogameshop?igsh=MWg3c2JnaWVxMGk1cQ==" target="_blank">
-          <img src="Imagenes/Instagram_Logo.png" alt="Instagram" width="100" height="70">
-        </a>
-        <a href="https://www.facebook.com/share/1AGrvYgH7m/" target="_blank">
-          <img src="Imagenes/Facebook_Logo.png" alt="Facebook" width="100" height="70">
-        </a>
-      </div>
+        <!-- Redes Sociales -->
+        <h2 class="text-center" id="redes-titulo">🌐 Redes Sociales</h2>
+        <div class="d-flex justify-content-center gap-5 mb-4" role="list" aria-labelledby="redes-titulo">
+          <a 
+            href="https://www.instagram.com/contactogameshop?igsh=MWg3c2JnaWVxMGk1cQ==" 
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visitar Instagram de GameShop"
+            role="listitem">
+            <img src="Imagenes/Instagram_Logo.png" alt="Instagram" width="100" height="70" loading="lazy">
+          </a>
+          <a 
+            href="https://www.facebook.com/share/1AGrvYgH7m/" 
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visitar Facebook de GameShop"
+            role="listitem">
+            <img src="Imagenes/Facebook_Logo.png" alt="Facebook" width="100" height="70" loading="lazy">
+          </a>
+        </div>
 
-      <h2 class="text-center">📍 Dirección</h2>
-      <div class="text-center">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3799.7926405712824!2d-63.199291!3d-17.754407!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDQ1JzE0LjciUyA2M8KwMTEnNTcuNyJX!5e0!3m2!1ses!2sbo!4v1749405726929!5m2!1ses!2sbo" width="80%" height="400"></iframe>
-      </div>
-      <p class="text-center mt-2">📌 Av. San Martín esq. 4 anillo, Santa Cruz de la Sierra</p>
-    </section>
+        <!-- Ubicación -->
+        <h2 class="text-center" id="ubicacion-titulo">📍 Dirección</h2>
+        <div class="text-center">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d3799.7926405712824!2d-63.199291!3d-17.754407!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDQ1JzE0LjciUyA2M8KwMTEnNTcuNyJX!5e0!3m2!1ses!2sbo!4v1749405726929!5m2!1ses!2sbo" 
+            width="80%" 
+            height="400"
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación de GameShop en Google Maps"
+            aria-label="Mapa de ubicación de GameShop">
+          </iframe>
+        </div>
+        <p class="text-center mt-2">
+          <strong>📌 Av. San Martín esq. 4 anillo, Santa Cruz de la Sierra</strong>
+        </p>
+      </section>
 
-    <!-- Horarios -->
-    <section class="info-box-Atención">
-      <h2 class="text-center">🕒 Horarios de Atención</h2>
-      <p class="text-center">
-        Lunes a Viernes:<br>07:00 – 21:30<br><br>
-        Sábados:<br>09:00 – 18:30<br><br>
-        Domingos:<br><span class="text-danger">Cerrado</span>
-      </p>
-      <div class="text-center mt-4">
-        <h3>💳 Métodos de Pago</h3>
-        <p>Efectivo, QR, Tigo Money y transferencias.</p>
-      </div>
-      <div class="text-center mt-4">
-        <h3>🚚 Envíos</h3>
-        <p>Santa Cruz desde Bs. 20. ¡Consulta por tu zona!</p>
-      </div>
-    </section>
+      <!-- Horarios y pagos -->
+      <section class="info-box-Atención" aria-labelledby="horarios-titulo">
+        <h2 id="horarios-titulo" class="text-center">🕒 Horarios de Atención</h2>
+        <div class="text-center">
+          <p>
+            <strong>Lunes a Viernes:</strong><br>07:00 – 21:30<br><br>
+            <strong>Sábados:</strong><br>09:00 – 18:30<br><br>
+            <strong>Domingos:</strong><br><span class="text-danger">Cerrado</span>
+          </p>
+        </div>
+        
+        <div class="text-center mt-4">
+          <h3>💳 Métodos de Pago</h3>
+          <p>Efectivo, QR, Tigo Money y transferencias bancarias.</p>
+        </div>
+        
+        <div class="text-center mt-4">
+          <h3>🚚 Envíos</h3>
+          <p>Santa Cruz desde Bs. 20. <br>¡Consulta por tu zona!</p>
+        </div>
+      </section>
 
-  </div>
-</footer>
+    </div>
+    
+  </footer>
 
+  <!-- Botones flotantes de navegación -->
+  <button 
+    id="btn-top" 
+    aria-label="Volver arriba"
+    title="Volver arriba">
+    ↑
+  </button>
 
-  <!-- Botón subir -->
-  <button id="btn-top">↑</button>
+  <button 
+    id="btn-carrito" 
+    aria-label="Ver carrito de compras"
+    title="Ver carrito">
+    🛒
+  </button>
 
-  <!-- Botón Carrito -->
-      <button id="btn-carrito">🛒</button>
-
-  <!-- Scripts -->
+  <!-- Scripts (cargados con defer para mejor performance) -->
   <script src="Carrusel/Js/bootstrap.bundle.min.js" defer></script>
   <script src="Carrusel/Js/jquery-3.6.0.min.js" defer></script>
   <script src="Carrusel/Js/slick.min.js" defer></script>
   <script src="Js/scrollButtons.js" defer></script>
   <script src="Carrusel/Js/Carrusel_Logos.js" defer></script>
-  <script src="/Carrito/Js/Carrito.js" defer></script>
-
-  <!-- lightBox -->
-  <script src="Js/LightBox.js"defer></script>
+  <script src="Carrito/Js/Carrito.js" defer></script>
+  <script src="Js/LightBox.js" defer></script>
 
 </body>
 </html>
-
